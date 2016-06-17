@@ -21,3 +21,4 @@ webpack:webpack
 webpack:react
 webpack:stylus
 check
+stylus
