@@ -1,0 +1,1 @@
+import 'PopulistApp/client';
