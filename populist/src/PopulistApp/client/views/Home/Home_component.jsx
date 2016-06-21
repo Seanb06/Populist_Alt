@@ -54,7 +54,7 @@ const Home = ({lists}) => (
           </CardMedia>
           <CardTitle className="card-title" title={title} />
           <CardActions>
-            <FlatButton label="Action1" />
+            <FlatButton label="Action1"  />
           </CardActions>
         </Card>
 

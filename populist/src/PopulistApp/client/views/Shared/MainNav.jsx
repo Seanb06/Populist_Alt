@@ -5,7 +5,7 @@ import AppBar from 'material-ui/AppBar'
 export default function MainNav() {
   return ( 
     
-    <div> 
+    <div className=""> 
     Top Nav <AppBar title="My AppBar" />
     </div>
   )
