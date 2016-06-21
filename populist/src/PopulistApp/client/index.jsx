@@ -42,7 +42,7 @@ let render = (key = null) => {
     <Provider store={store}>
       <div>
         <Router history={history} routes={routes} key={key} />
-        <DevTools />
+       {/*} <DevTools />*/}
       </div>
     </Provider>
   )
