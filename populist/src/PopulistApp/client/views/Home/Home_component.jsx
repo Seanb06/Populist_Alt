@@ -39,7 +39,7 @@ const Home = ({lists}) => (
   */}
 
   <Masonry
-    className={'bobo'} // default ''
+    className={'card-grid'} // default ''
     options={masonryOptions} // default {}
     disableImagesLoaded={false} // default false
     updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
