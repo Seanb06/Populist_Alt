@@ -2,11 +2,20 @@ import React from 'react'
 import { Grid, Row, Col } from 'react-flexbox-grid/lib/index';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
+var Masonry = require('react-masonry-component');
+
+var masonryOptions = {
+    transitionDuration: 0
+};
 
 
 const Home = ({lists}) => (
+
   <div className="body-max">
 
+
+
+  {/*
   <Grid>
     <Row className="bobo">
       <Col xs={4} md={3}>Hello, world!</Col>
@@ -27,6 +36,33 @@ const Home = ({lists}) => (
 
     </Row>
   </Grid>
+  */}
+
+  <Masonry
+    className={'bobo'} // default ''
+    elementType={'ul'} // default 'div'
+    options={masonryOptions} // default {}
+    disableImagesLoaded={false} // default false
+    updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
+  >
+    {lists.map(({_id, title}) => (
+
+      <li key={_id}>
+        
+        <Card className="home-card">
+          <CardMedia>
+            <img src="http://lorempixel.com/600/337/nature/" />
+          </CardMedia>
+          <CardTitle title={title} />
+          <CardActions>
+            <FlatButton label="Action1" />
+          </CardActions>
+        </Card>
+
+      </li>
+    ))}
+    
+  </Masonry>
 
   {/*
     Home
