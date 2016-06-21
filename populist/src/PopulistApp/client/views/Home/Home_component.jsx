@@ -11,7 +11,7 @@ var masonryOptions = {
 
 const Home = ({lists}) => (
 
-  <div className="body-max">
+  <div className="">
 
 
 
@@ -52,7 +52,7 @@ const Home = ({lists}) => (
           <CardMedia>
             <img src="http://lorempixel.com/600/337/nature/" />
           </CardMedia>
-          <CardTitle title={title} />
+          <CardTitle className="card-title" title={title} />
           <CardActions>
             <FlatButton label="Action1" />
           </CardActions>

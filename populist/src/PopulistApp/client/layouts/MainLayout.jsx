@@ -39,7 +39,7 @@ export const MainLayout = ({ children }) => (
     <MainNav />
     <Header />
     
-    <div className="body-max">
+    <div className="">
 
       
 
