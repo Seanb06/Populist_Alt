@@ -38,6 +38,7 @@ const Home = ({lists}) => (
   </Grid>
   */}
 
+  <h3 className="sec-head body-max">Our Most Popular Populists</h3>
   <Masonry
     className={'card-grid'} // default ''
     options={masonryOptions} // default {}
@@ -47,7 +48,6 @@ const Home = ({lists}) => (
     {lists.map(({_id, title}) => (
 
       <div key={_id}>
-        
         <Card className="home-card">
           <CardMedia>
             <img src="http://lorempixel.com/600/337/nature/" />
