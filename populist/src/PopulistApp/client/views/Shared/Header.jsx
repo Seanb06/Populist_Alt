@@ -9,7 +9,7 @@ export default function Header() {
       <div className="hero-container">
         <img src="/assets/images/logo-hero.png" />
         <div className="hero-txt">
-          Create, share and discover 
+          Create, share and discover<br />
           the best stuff the world has to offer.
         </div>
         <div className="hero-btns">
