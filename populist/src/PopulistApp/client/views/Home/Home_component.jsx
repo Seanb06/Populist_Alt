@@ -2,6 +2,7 @@ import React from 'react'
 import { Grid, Row, Col } from 'react-flexbox-grid/lib/index';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
+import { Link } from 'react-router';
 var Masonry = require('react-masonry-component');
 
 var masonryOptions = {
@@ -54,7 +55,13 @@ const Home = ({lists}) => (
           </CardMedia>
           <CardTitle className="card-title" title={title} />
           <CardActions>
-            <FlatButton label="Action1"  />
+            {_id}
+            <FlatButton
+              containerElement={<Link to={'/list/'+_id } />}
+              linkButton={true}
+              label={_id}/>
+            }
+        
           </CardActions>
         </Card>
 
@@ -62,19 +69,6 @@ const Home = ({lists}) => (
     ))}
     
   </Masonry>
-
-  {/*
-    Home
-    This is the home page of lists
-    <ul>
-      {lists.map(({_id, title}) => (
-        <li key={_id}>
-          {title}
-        </li>
-      ))}
-    </ul>
-
-  */}
 
   </div>
 );
