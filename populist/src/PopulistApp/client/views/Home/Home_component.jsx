@@ -5,15 +5,16 @@ import FlatButton from 'material-ui/FlatButton';
 
 
 const Home = ({lists}) => (
-  <div>
+  <div className="body-max">
 
   <Grid>
     <Row className="bobo">
-      <Col xs={6} md={3}>Hello, world!</Col>
-      <Col xs={6} md={3}>
+      <Col xs={4} md={3}>Hello, world!</Col>
+      <Col xs={4} md={3}>
         <Card className="home-card">
             <CardMedia>
               <img src="http://lorempixel.com/600/337/nature/" />
+              
             </CardMedia>
             <CardTitle title="5 Best bubba albertos" />
             <CardActions>
@@ -21,10 +22,9 @@ const Home = ({lists}) => (
             </CardActions>
           </Card>
       </Col>
-      <Col xs={6} md={3}>Hello, world!</Col>
-      <Col xs={6} md={3}>Hello, world!</Col>
-      <Col xs={6} md={3}>Hello, world!</Col>
-      <Col xs={6} md={3}>Hello, world!</Col>
+      <Col xs={4} md={3}>Hello, world!</Col>
+      <Col xs={4} md={3}>Hello, world!</Col>
+
     </Row>
   </Grid>
 

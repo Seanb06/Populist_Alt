@@ -38,25 +38,10 @@ export const MainLayout = ({ children }) => (
   <div>
     <MainNav />
     <Header />
-    <div>
+    
+    <div className="body-max">
 
-      <FlatButton label="Default" />
-      <FlatButton label="Primary" primary={true} />
-      <FlatButton label="Secondary" secondary={true} />
-      <FlatButton label="Disabled" disabled={true} />
-
-      <br />
-      <br />
-
-      <RaisedButton label="Default" style={style} />
-      <RaisedButton label="Primary" primary={true} style={style} />
-      <RaisedButton label="Secondary" secondary={true} style={style} />
-      <RaisedButton label="Disabled" disabled={true} style={style} />
-
-      <br />
-      <br />
-
-      <a href="#">test</a>
+      
 
       {children}
     </div>
