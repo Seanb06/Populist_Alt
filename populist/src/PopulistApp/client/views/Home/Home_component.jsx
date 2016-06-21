@@ -40,14 +40,13 @@ const Home = ({lists}) => (
 
   <Masonry
     className={'bobo'} // default ''
-    elementType={'ul'} // default 'div'
     options={masonryOptions} // default {}
     disableImagesLoaded={false} // default false
     updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
   >
     {lists.map(({_id, title}) => (
 
-      <li key={_id}>
+      <div key={_id}>
         
         <Card className="home-card">
           <CardMedia>
@@ -59,7 +58,7 @@ const Home = ({lists}) => (
           </CardActions>
         </Card>
 
-      </li>
+      </div>
     ))}
     
   </Masonry>
