@@ -31,6 +31,9 @@ const store = createStore(
 
 const history = syncHistoryWithStore(browserHistory, store)
 
+var injectTapEventPlugin = require("react-tap-event-plugin");
+injectTapEventPlugin();
+
 let render = (key = null) => {
 
   
