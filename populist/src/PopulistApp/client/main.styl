@@ -1,19 +1,24 @@
-html {
+html 
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
-*, *:before, *:after {
+  height 100%
+  height 100vh
+
+*, *:before, *:after 
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
   box-sizing: inherit;
-}
+
 
 
 body 
 	margin 0
+	padding 0
 	background rgba(215,215,215,0.34)
-	font-family: 'Raleway', sans-serif;
+	font-family 'Raleway', sans-serif
+	min-height 100%
+	min-height 100vh
 
 
 
@@ -102,11 +107,45 @@ a
 
 
 
+
+
+
+
+// List Detail 
+
+.list-detail-container
+	position: relative
+	> div 
+		height: 400px
+
+	.list-detail-cont 
+		background-color: white
+		outline: 1px dotted green
+		margin-bottom: 30px
+
+	.list-detail-sidebar
+		background-color red 
+		outline: 1px dotted green
+
+
+@media (min-width:675px)
+	.list-detail-cont 
+		margin-right: 330px
+	.list-detail-sidebar
+		width: 300px 
+		position: absolute
+		top 0px
+		right 15px
+
+
+
 // Main Nav 
 .nav-container 
 	padding: 30px 30px 0px
 	height: 140px
 	background: 'rgba(215,215,215,0.34)'
+	> div 
+		padding-right: 0px !important
 
 	.head-logo 
 		background: transparent url('/assets/images/logo-head.png') no-repeat center center
@@ -145,6 +184,11 @@ a
 	padding: 25px 30px 0
 	font-size: 19px
 	font-weight 100
+	/*position: fixed
+	width: 100%
+	bottom 0px
+	left 0px
+	z-index: 5*/
 
 	a 
 		color white
@@ -157,3 +201,18 @@ a
 .right-footer 
 	float right
 
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+
+.hide 
+	display none !important

@@ -12,12 +12,19 @@ const ListContent = ({listDetail}) => (
 );
 
 let ListDetail = ({listDetail, listId}) => (
-  <div>
-    <div>
-      {listDetail? <ListContent listDetail={listDetail}/> : "Loading..."}
+  <div className="list-detail-container body-max clearfix">
+    <div className="list-detail-cont">content
+      <div>
+        {listDetail? <ListContent listDetail={listDetail}/> : "Loading..."}
+      </div>
+      <Link to={'/'}>Back</Link>
+      <br />
     </div>
-    <Link to={'/'}>Back</Link>
-    <br />
+    <div className="list-detail-sidebar">sidebar</div>
+
+
+
+    
   </div>
 );
 

@@ -5,7 +5,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 
 export default function Header() {
   return ( 
-    <div className="body-max">
+    <div className="body-max hide ">
       <div className="hero-container">
         <img src="/assets/images/logo-hero.png" />
         <div className="hero-txt">
