@@ -64,7 +64,21 @@ a
 		max-width:1320px
 		margin: 0 auto
 
+@media (max-width:674px)
+	.home-card 
+		width auto
+		height auto
 
+	.card-grid > div 
+		position: relative !important
+		top auto !important
+
+	.card-grid 
+		height: auto !important
+
+
+.card-grid > div 
+	outline: 1px dotted red
 
 
 .hero-container
@@ -75,6 +89,8 @@ a
 	.hero-txt 
 		color #4A90E2
 		font-size: 47px
+		font-family: arial
+		font-weight 100
 		line-height: .9em
 		margin: 10px 0 20px
 
@@ -86,12 +102,39 @@ a
 
 
 
+// Main Nav 
+.nav-container 
+	padding: 30px 30px 0px
+	height: 140px
+	background: 'rgba(215,215,215,0.34)'
+
+	.head-logo 
+		background: transparent url('/assets/images/logo-head.png') no-repeat center center
+		width: 160px
+		height: 60px
+		text-indent: -9999px
+
+	.nav-sel 
+		height: 50px
+		background-color: #D8D8D8
+		font-size: 18px !important
+		margin: 10px 10px 0 15px
+		svg 
+			fill black !important
+
+	.nav-btn
+		height: 50px
 
 
 
 
 
 
+
+
+
+
+// Footer
 
 .main-footer
 	background #1D3557
@@ -99,6 +142,18 @@ a
 	width 100%
 	min-height: 70px
 	margin-top: 40px
+	padding: 25px 30px 0
+	font-size: 19px
+	font-weight 100
 
+	a 
+		color white
+		text-decoration none
+		margin-right: 20px
 
+.left-footer
+	float left
+
+.right-footer 
+	float right
 

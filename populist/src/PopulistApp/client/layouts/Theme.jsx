@@ -16,6 +16,11 @@ export const muiTheme = getMuiTheme({
   appBar: {
     height: 50,
   },
+  button: {
+      height: 50,
+      minWidth: 88,
+  },
+  
 });
 
 export default muiTheme

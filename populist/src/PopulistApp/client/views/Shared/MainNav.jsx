@@ -8,7 +8,7 @@ import {logout} from '../../actions/auth';
 
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-
+import TextField from 'material-ui/TextField';
 
 function mapStateToProps(state) {
   return {
@@ -23,9 +23,14 @@ function mapDispatchToProps(dispatch) {
 
 
 var toolbarStyle = {
-  background: 'rgba(215,215,215,0.34)'
+  background: 'transparent'
 };
 
+var navBtnStyle = {
+  "margin": '0px 0px 0px 10px',
+  "border-radius": '0px',
+  "text-transform": 'none'
+};
 export class MainNav extends React.Component {
 
   constructor(props) {
@@ -39,9 +44,11 @@ export class MainNav extends React.Component {
 
   render() {
     return ( 
+      <div className="nav-container">
       <Toolbar style={toolbarStyle}>
         <ToolbarGroup firstChild={true}>
-          <DropDownMenu value={this.state.value} onChange={this.handleChange}>
+          <a href="/" className="head-logo">Populist</a>
+          <DropDownMenu className="nav-sel" value={this.state.value} onChange={this.handleChange}>
             <MenuItem value={1} primaryText="Browse" />
             <MenuItem value={2} primaryText="Category" />
             <MenuItem value={3} primaryText="Category" />
@@ -50,22 +57,33 @@ export class MainNav extends React.Component {
             <MenuItem value={6} primaryText="Category" />
             <MenuItem value={7} primaryText="Category" />
           </DropDownMenu>
+          <div className="nav-srch"> 
+            <TextField hintText="Search the best" />
+          </div>
         </ToolbarGroup>
+
         <ToolbarGroup>
           <ToolbarSeparator />
 
           <RaisedButton
+            className="nav-btn nav-create-btn"
             primary={true}
             containerElement={<Link to='/profile' />}
             linkButton={true}
-            label="Create a profile" />
+            label="Create a profile"
+            style={navBtnStyle}
+             />
           <RaisedButton
+            className="nav-btn nav-sign-btn"
             secondary={true}
             containerElement={<Link to='/login' />}
             linkButton={true}
-            label="Sign in" />
+            label="Sign in"
+            style={navBtnStyle}
+             />
         </ToolbarGroup>
       </Toolbar>
+      </div>
     )
   }
 }
