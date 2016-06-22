@@ -22,3 +22,6 @@ webpack:react
 webpack:stylus
 check
 stylus
+accounts-google
+accounts-facebook
+accounts-password

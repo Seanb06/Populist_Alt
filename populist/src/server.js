@@ -9,11 +9,23 @@ Meteor.startup(function(){
     _id: 'one', title: 'Populist list 1', content: 'Yeah! Lists lists lists!'
   });
   Lists.insert({_id: 'two', title: 'Populist list 2', content: 'Something new soon.'});
-  Lists.insert({_id: 'three', title: 'Poplist list 3'});
-  Lists.insert({_id: 'four', title: 'Poplist list 4'});
-  Lists.insert({_id: 'five', title: 'Poplist list 5'});
-  Lists.insert({_id: 'six', title: 'Poplist list 6'});
+  Lists.insert({_id: 'three', title: 'Poplist list 3', content: 'Content for list 3.'});
+  Lists.insert({_id: 'four', title: 'Poplist list 4', content: 'Content for list 4.'});
+  Lists.insert({_id: 'five', title: 'Poplist list 5', content: 'Content for list 5.'});
+  Lists.insert({_id: 'six', title: 'Poplist list 6', content: 'Content for list 6.'});
   Lists.insert({_id: 'seven', title: 'My Secret LIst', category: 'private'});
+
+
+  ['Carrie', 'Al', 'Sean'].forEach(function(name) {
+
+    if (!Meteor.users.findOne({"username": name}) ) {
+      Accounts.createUser({
+        username: name,
+        password: 'password',
+        profile: {},
+      });
+    }
+  });
   
 });
 

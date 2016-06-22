@@ -12,6 +12,9 @@ import { createRoutes } from './routes/index'
 
 import count from './reducers/count'
 
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+
 const reducer = combineReducers({
   count,
   routing: routerReducer
@@ -34,18 +37,18 @@ const history = syncHistoryWithStore(browserHistory, store)
 var injectTapEventPlugin = require("react-tap-event-plugin");
 injectTapEventPlugin();
 
-let render = (key = null) => {
 
-  
+
+
+let render = (key = null) => {
+ 
   const routes = createRoutes(store)
-  console.log(routes)
-  console.log(history)
-  console.log(key)
+ 
   const App = (
     <Provider store={store}>
       <div>
         <Router history={history} routes={routes} key={key} />
-       {/*} <DevTools />*/}
+       {/*<DevTools />*/}
       </div>
     </Provider>
   )
