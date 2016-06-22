@@ -26,6 +26,15 @@ Meteor.startup(function(){
       });
     }
   });
+
+
+  ServiceConfiguration.configurations.remove ({service: "google"});
+  ServiceConfiguration.configurations.insert({
+    service: "google",
+    consumerKey: process.env.GOOGLE_CLIENT_KEY,
+    secret: process.env.GOOGLE_SECRET
+  });
+    
   
 });
 

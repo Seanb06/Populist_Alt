@@ -11,8 +11,6 @@ const mapStateToProps = state => ({
 const onPropsChange = (props, onData) => {
   const handle = Meteor.subscribe('lists');
 
-  console.log("handle");
-  console.log(handle);
   if(handle.ready()) {
     const lists = Lists.find({}, {sort: {_id: 1}}).fetch();
     onData(null, {lists});

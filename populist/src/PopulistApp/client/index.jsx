@@ -4,19 +4,22 @@ import DockMonitor from 'redux-devtools-dock-monitor'
 
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { createStore, combineReducers } from 'redux'
+import { createStore, combineReducers, applyMiddleware } from 'redux'
 import { Provider, connect } from 'react-redux'
 import { Router, browserHistory, Link } from 'react-router'
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
 import { createRoutes } from './routes/index'
+import thunk from 'redux-thunk';
 
 import count from './reducers/count'
+import auth from './reducers/auth';
 
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import {loadUser} from './actions/auth';
+
 
 const reducer = combineReducers({
   count,
+  auth,
   routing: routerReducer
 })
 
@@ -29,16 +32,14 @@ const DevTools = createDevTools(
 // Add the reducer to your store on the `routing` key
 const store = createStore(
   reducer,
-  DevTools.instrument()
+  DevTools.instrument(),
+  applyMiddleware(thunk)
 )
 
 const history = syncHistoryWithStore(browserHistory, store)
 
 var injectTapEventPlugin = require("react-tap-event-plugin");
 injectTapEventPlugin();
-
-
-
 
 let render = (key = null) => {
  
@@ -48,7 +49,7 @@ let render = (key = null) => {
     <Provider store={store}>
       <div>
         <Router history={history} routes={routes} key={key} />
-       {/*<DevTools />*/}
+        {/*<DevTools />*/}
       </div>
     </Provider>
   )
@@ -57,4 +58,5 @@ let render = (key = null) => {
 
 Meteor.startup(function(){
   render()
+  store.dispatch(loadUser());
 });
