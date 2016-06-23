@@ -102,8 +102,11 @@ a
 
 
 
-
-
+.thumb
+	img 
+		width: 100%
+		height: auto
+		max-width 700px
 
 
 
@@ -115,20 +118,83 @@ a
 
 .list-detail-container
 	position: relative
-	> div 
-		height: 400px
 
 	.list-detail-cont 
+		position: relative
 		background-color: white
-		outline: 1px dotted green
 		margin-bottom: 30px
+		padding: 60px 30px
+		.likes-corner
+			position: absolute 
+			top 0px;
+			left 0px
+			width: 50px
+			height: 50px
+			background: red
+		.save-corner
+			position: absolute 
+			top 0px;
+			right 0px
+			width: 50px
+			height: 50px
+			background: red
+
+		.num-likes 
+			text-align: center
+			color #457BD9
+			font-family: 'Roboto', sans-serif;
+			font-size: 16px
+			font-weight 700
+			margin-bottom: 20px
+
+		.list-head 
+			text-align: center
+			.num-head
+				font-size: 45px
+				font-weight 100
+			h2 
+				font-size: 73px
+				font-weight 800
+				margin: 0 0px 15px
+				letter-spacing: -2px
+
+			.list-descr 
+				font-size: 24px
+
+			.list-head-social
+				display: inline-block 
+				width: 300px
+				height: 50px 
+				text-align: center
+				background: blue
+				margin: 20px 0 40px
+
+		.list-item 
+			h3 
+				font-size: 52px
+				font-weight 800
+				margin 10px 0 15px
+				span 
+					font-family: 'Roboto', sans-serif;
+					font-weight 100
+			p 
+				font-size: 24px
+				margin: 0 0 30px 
+
 
 	.list-detail-sidebar
-		background-color red 
-		outline: 1px dotted green
+
+		.side-head-best
+			border-top 15px solid #457BD9
+			padding-top: 8px
+			padding-bottom: 10px
+			margin: 0px
+			font-size: 24px
+			font-weight 800
 
 
-@media (min-width:675px)
+
+@media (min-width:851px)
 	.list-detail-cont 
 		margin-right: 330px
 	.list-detail-sidebar
