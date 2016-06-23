@@ -28,8 +28,8 @@ var toolbarStyle = {
 
 var navBtnStyle = {
   "margin": '0px 0px 0px 10px',
-  "border-radius": '0px',
-  "text-transform": 'none'
+  "borderRadius": '0px',
+  "textTransform": 'none'
 };
 export class MainNav extends React.Component {
 
