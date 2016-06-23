@@ -7,6 +7,7 @@ export const LoginLayout = ({ children }) => (
   <div>
     {children}
   </div>
+
  </MuiThemeProvider>
 )
 

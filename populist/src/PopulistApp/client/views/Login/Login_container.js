@@ -9,7 +9,10 @@ const mapStateToProps = state => ({
 });
 
 const onPropsChange = (props, onData) => {
+	onData(null, null);
 
 };
 
-export default connect(mapStateToProps)(composeWithTracker(onPropsChange)(Login));
+//export default connect(mapStateToProps)(composeWithTracker(onPropsChange)(Login));
+
+export default Login
