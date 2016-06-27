@@ -59,17 +59,17 @@ let ListDetail = ({listDetail, listId}) => (
     <div className="list-detail-sidebar">
       <h4 className="side-head-best">Best of the Best Lists</h4>
       
-      <div className="sb-list-item">
+      <a href="#" className="sb-list-item">
         <img src="/assets/images/sb-list-img.png" />
         <h5>The 10 Best Books for Summer 2016</h5>
         <div className="likes-mod">like mod</div>
-      </div>
+      </a>
 
-      <div className="sb-list-item">
+      <a  href="#" className="sb-list-item">
         <img src="/assets/images/sb-list-img.png" />
         <h5>The 10 Best Books for Summer 2016</h5>
         <div className="likes-mod">like mod</div>
-      </div>
+      </a>
 
     </div>
 
