@@ -6,6 +6,16 @@ var Masonry = require('react-masonry-component');
 
 const FeaturedLists = () => (
   <div className="mase-cont">
+
+  	<div className="filter-nav body-max">
+  		<a href="#">filter</a>
+  		<a href="#">filter</a>
+  		<a href="#">filter</a>
+  		<a href="#">filter</a>
+  		<a href="#">filter</a>
+  		<a href="#">filter</a>
+  	</div>
+
     <Masonry
     className={'card-grid'} // default ''
     disableImagesLoaded={false} // default false

@@ -1,3 +1,10 @@
+* { padding: 0; margin: 0; }
+html, body, #fullheight {
+    min-height: 100% !important;
+    height: 100%;
+}
+
+
 html 
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -35,11 +42,26 @@ a
 	padding-left 15px 
 	padding-right 15px
 
+.list-max
+	max-width 1060px
+	position relative
+
 .sec-head
 	font-weight 800 
 	text-align center
 	font-size 32px
 
+
+.filter-nav 
+	margin 20px 0 0
+	text-align center
+	a 
+		display inline-block
+		color #9B9B9B
+		font-size 20px 
+		margin 0 10px
+		font-weight 100
+		text-decoration none
 
 .mase-cont 
 	/*border 1px solid rgba(215,215,215,0.01)*/
@@ -259,6 +281,85 @@ a
 		position: absolute
 		top 0px
 		right 15px
+
+
+
+
+// List Create 
+
+textarea 
+	width: 100%
+
+.create-header
+	background #457BD9
+	color white
+	padding: 20px 0 10px
+	margin: 0 0 50px
+	h2 
+		margin: 0
+		font-weight: 100
+		font-size 72px
+
+.create-body
+	position: relative 
+
+	.list-status 
+		position: absolute 
+		right: 0px	
+		top 0px
+		width: 160px
+		height: 80px
+		background: blue
+
+	h3 
+		color #E63946 
+		font-size: 45px
+		margin: 0 
+		font-weight: 500
+		padding-top: 40px
+		margin-bottom 40px
+
+	h4 
+		color rgba(16,15,15,0.46);
+		font-size: 33px
+		font-weight: 500
+		margin-bottom: 5px
+
+	h4.mini-head 
+		font-size: 22px
+
+	.create-stack 
+		margin-bottom 30px
+
+	.create-topic
+		.left-part,
+		.right-part 
+			display: inline-block 
+			vertical-align: top
+		.left-part
+			width: 80%
+			margin-right 2%
+			textarea 
+				min-height: 85px
+		.right-part
+			width: 18% 
+			margin-right: -6px
+
+
+	.create-description 
+		textarea 
+			min-height: 180px
+
+
+
+
+
+
+
+
+
+
+
 
 
 
