@@ -8,18 +8,9 @@ export const MainLayout = ({ children }) => (
   <MuiThemeProvider muiTheme={muiTheme}>
   <div>
     <MainNav />
-    <div className="">
+    <div className="container-bg">
       {children}
     </div>
-
-    {/*
-        <Grid>
-          <Row>
-            <Col xs={6} md={3}>Hello, world!</Col>
-          </Row>
-        </Grid>
-
-    */}
     <Footer />
   </div>
  </MuiThemeProvider>

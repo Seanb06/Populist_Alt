@@ -14,7 +14,7 @@ var masonryOptions = {
 
 const Home = ({lists}) => (
 
-  <div className="">
+  <div>
 
 
 
@@ -43,6 +43,7 @@ const Home = ({lists}) => (
   <Header /> 
   <FeaturedLists />
   <h3 className="sec-head body-max">Our Most Popular Populists</h3>
+  <div className="mase-cont">
   <Masonry
     className={'card-grid'} // default ''
     options={masonryOptions} // default {}
@@ -50,7 +51,6 @@ const Home = ({lists}) => (
     updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
   >
     {lists.map(({_id, title}) => (
-
       <div key={_id}>
         <Card className="home-card">
           <CardMedia>
@@ -64,15 +64,12 @@ const Home = ({lists}) => (
               linkButton={true}
               label={_id}/>
             }
-        
           </CardActions>
         </Card>
-
       </div>
     ))}
-    
   </Masonry>
-
+  </div>
   </div>
 );
 
