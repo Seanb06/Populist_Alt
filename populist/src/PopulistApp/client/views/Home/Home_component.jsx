@@ -4,6 +4,7 @@ import { Grid, Row, Col } from 'react-flexbox-grid/lib/index';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 import { Link } from 'react-router';
+import FeaturedLists from '../FeaturedLists/FeaturedLists_container'
 var Masonry = require('react-masonry-component');
 
 var masonryOptions = {
@@ -40,6 +41,7 @@ const Home = ({lists}) => (
   </Grid>
   */}
   <Header /> 
+  <FeaturedLists />
   <h3 className="sec-head body-max">Our Most Popular Populists</h3>
   <Masonry
     className={'card-grid'} // default ''
