@@ -16,4 +16,4 @@ const onPropsChange = (props, onData) => {
 };
 
 
-export default connect(mapStateToProps)(composeWithTracker(onPropsChange)(ListCreate));
+export default ListCreate; //connect(mapStateToProps)(composeWithTracker(onPropsChange)(ListCreate));
