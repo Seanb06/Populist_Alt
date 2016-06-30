@@ -1,15 +1,13 @@
 import React from 'react'
 import MainNav from '../views/Shared/MainNav'
-import Header from '../views/Shared/Header'
 import Footer from '../views/Shared/Footer'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import { muiTheme } from './Theme'
 
 export const MainLayout = ({ children }) => (
   <MuiThemeProvider muiTheme={muiTheme}>
   <div>
     <MainNav />
-    <Header /> 
     <div className="">
       {children}
     </div>

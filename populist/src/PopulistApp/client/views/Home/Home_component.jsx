@@ -1,4 +1,5 @@
 import React from 'react'
+import Header from '../Shared/Header';
 import { Grid, Row, Col } from 'react-flexbox-grid/lib/index';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
@@ -38,7 +39,7 @@ const Home = ({lists}) => (
     </Row>
   </Grid>
   */}
-
+  <Header /> 
   <h3 className="sec-head body-max">Our Most Popular Populists</h3>
   <Masonry
     className={'card-grid'} // default ''

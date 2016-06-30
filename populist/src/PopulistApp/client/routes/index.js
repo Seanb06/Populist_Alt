@@ -7,6 +7,7 @@ import Home from '../views/Home/Home_container'
 import ListDetail from '../views/ListDetail/ListDetail_container'
 import ListCreate from '../views/ListCreate/ListCreate_container'
 import Login from '../views/Login/Login_container'
+import Profile from '../views/Profile/Profile_container'
 
 const App = ({children}) => {
   return (
@@ -31,10 +32,12 @@ function logoutOnEnterHook(nextState, replaceState) {
 }
 
 function requireAuth(nextState, replaceState) {
-  if (!store.getState().auth.user) {
-    store.dispatch(showNeedLoginMsg())
-    replaceState({ nextPathname: nextState.location.pathname }, '/login')
-  }
+
+  console.log("this route will requireAuth");
+  // if (!store.getState().auth.user) {
+  //   store.dispatch(showNeedLoginMsg())
+  //   replaceState({ nextPathname: nextState.location.pathname }, '/login')
+  // }
 }
 
 export const createRoutes = (store) => (
@@ -43,6 +46,7 @@ export const createRoutes = (store) => (
         <IndexRoute component={Home} />
         <Route path="/list/:listId" component={ListDetail} />
         <Route path="/create" component={ListCreate} onEnter={requireAuth} />
+        <Route path="/profile" component={Profile} onEnter={requireAuth} />
       </Route>
 
       <Route component={LoginLayout}>
