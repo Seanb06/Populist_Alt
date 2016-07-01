@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route, IndexRoute } from 'react-router'
-
+import App from '../app/App_container'
 import MainLayout from '../layouts/MainLayout'
 import LoginLayout from '../layouts/LoginLayout'
 import Home from '../views/Home/Home_container'
@@ -9,38 +9,29 @@ import ListCreate from '../views/ListCreate/ListCreate_container'
 import Login from '../views/Login/Login_container'
 import Profile from '../views/Profile/Profile_container'
 
-const App = ({children}) => {
-  return (
-    <div>
-      {children}
-    </div>
-  );
-};
+export default function createRoutes(store) {
 
-App.propTypes = {
-  children: React.PropTypes.element,
-};
-
-function logoutOnEnterHook(nextState, replaceState) {
-  if (store.getState().auth.user) {
-    // logout the user, and redirect to '/' while success
-    store.dispatch(logoutAndRedirectHome())
-  } else {
-    // the user hasn't login yet
-    replaceState(null, '/')
+  function logoutOnEnterHook(nextState, replaceState) {
+    if (store.getState().auth.user) {
+      // logout the user, and redirect to '/' while success
+      store.dispatch(logoutAndRedirectHome())
+    } else {
+      // the user hasn't login yet
+      replaceState(null, '/')
+    }
   }
-}
 
-function requireAuth(nextState, replaceState) {
+  function requireAuth(nextState, replaceState) {
 
-  console.log("this route will requireAuth");
-  // if (!store.getState().auth.user) {
-  //   store.dispatch(showNeedLoginMsg())
-  //   replaceState({ nextPathname: nextState.location.pathname }, '/login')
-  // }
-}
+    console.log("this route will requireAuth");
+    if (!store.getState().auth.user) {
+      store.dispatch(showNeedLoginMsg())
+      replaceState({ nextPathname: nextState.location.pathname }, '/login')
+    }
+  }
 
-export const createRoutes = (store) => (
+
+  return (
     <Route path="/" component={App}>
       <Route component={MainLayout}>
         <IndexRoute component={Home} />
@@ -55,8 +46,5 @@ export const createRoutes = (store) => (
         <Route path="logout" onEnter={logoutOnEnterHook} />
       </Route>
     </Route>
-  
-  
-)
-
-export default createRoutes
+  )
+}

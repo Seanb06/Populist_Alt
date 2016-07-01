@@ -10,18 +10,6 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import TextField from 'material-ui/TextField';
 
-function mapStateToProps(state) {
-  return {
-    user: state.auth.user,
-    logginIn: state.auth.logginIn,
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({logout}, dispatch);
-}
-
-
 var toolbarStyle = {
   background: 'transparent'
 };
@@ -88,4 +76,4 @@ export class MainNav extends React.Component {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(MainNav)
+export default MainNav

@@ -8,14 +8,13 @@ import { createStore, combineReducers, applyMiddleware } from 'redux'
 import { Provider, connect } from 'react-redux'
 import { Router, browserHistory, Link } from 'react-router'
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
-import { createRoutes } from './routes/index'
+import createRoutes from './routes'
 import thunk from 'redux-thunk';
 
 import count from './reducers/count'
 import auth from './reducers/auth';
 
 import {loadUser} from './actions/auth';
-
 
 const reducer = combineReducers({
   count,
@@ -42,10 +41,8 @@ var injectTapEventPlugin = require("react-tap-event-plugin");
 injectTapEventPlugin();
 
 let render = (key = null) => {
- 
-  const routes = createRoutes(store)
- 
-  const App = (
+  const routes = createRoutes(store) 
+  const AppContainer = (
     <Provider store={store}>
       <div>
         <Router history={history} routes={routes} key={key} />
@@ -53,7 +50,7 @@ let render = (key = null) => {
       </div>
     </Provider>
   )
-  ReactDOM.render(App, document.getElementById('mount'))
+  ReactDOM.render(AppContainer, document.getElementById('mount'))
 }
 
 Meteor.startup(function(){
