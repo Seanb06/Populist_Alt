@@ -78,7 +78,7 @@ const ListCreate = () => (
   		<div className="create-stack create-location">
   			<h4 className="mini-head">Location</h4>
   			<div className="form-holder">
-  				<TextField hintText="Optional" className="" />
+  				<TextField placeholder="Optional" className="" />
   				<a href="#">EDIT</a>
   			</div>
   		</div>
@@ -87,7 +87,7 @@ const ListCreate = () => (
   			<h4 className="mini-head">List Items</h4>
   			<div className="form-holder">
   				<TextField  className="" placeholder="Enter text or Paste in a web address" />
-  				<div className="num">1</div>
+  				<div className="num">01</div>
   				<a href="#" className="subtract">-</a>
   			</div>
   			<div className="form-holder">
@@ -98,12 +98,14 @@ const ListCreate = () => (
   			</div>
   			<div className="form-holder">
   				<TextField  className="" placeholder="Enter text or Paste in a web address" />
-  				<div className="num">1</div>
+  				<div className="num">88</div>
   				<a href="#" className="subtract">-</a>
 
   			</div>
   
-          <RaisedButton label="Add an Item" primary={true}  />
+  		  <button className="add-item-btn" value="test">ADD AN ITEM</button>
+
+
 
           <RadioButtonGroup name="xshipSpeed" defaultSelected="xnot_light">
 

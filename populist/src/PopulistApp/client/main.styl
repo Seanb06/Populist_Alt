@@ -310,7 +310,13 @@ textarea
 }
 
 
-	
+.create-item
+	.form-holder 
+		>div 
+			height: 85px !important
+
+
+
 
 .create-header
 	background #457BD9
@@ -326,16 +332,22 @@ textarea
 	position: relative 
 
 	input[type=text]
-		padding 20px 80px !important
+		padding-left 10px !important
+		padding-right 10px !important
+		/*padding 20px 80px 20px 90px !important*/
 		border 1px solid #100F0F !important
 		width 100% !important
+		font-size 20px !important
 		background-color white !important
+
+	.create-item input[type=text]
+		padding 20px 80px 20px 90px !important
 
 	hr 
 		display none
 
 	.form-holder 
-		margin-bottom 10px
+		margin-bottom 20px
 		position relative
 		div 
 			width 100% !important
@@ -343,18 +355,37 @@ textarea
 			@media (min-width:851px)
 				max-width: 650px
 
+
+
 		.num
 			position: absolute 
-			left 20px 
-			top 0px
+			left 10px 
+			top 14px
 			color #457BD9
 			font-size 60px
 			font-weight: 700
+			width 50px !important
+			height 60px !important
+			display: block
+			letter-spacing: -3px
+			line-height: .85em
 		.subtract
 			position: absolute 
-			right 0px
-			top 20px
+			right 10px
+			top 24px
 			text-decoration: none
+			display: block
+			width 40px
+			height: 40px
+			border-radius: 50%
+			background: #ccc
+			color white
+			text-align: center 
+			font-size 50px
+			line-height: 34px
+			@media (min-width:851px) 
+				right: auto 
+				left 594px
 
 	.list-status 
 		position: absolute 
@@ -412,14 +443,17 @@ textarea
 					width: 300px !important
 
 
-	.create-item
-		.form-holder 
-			>div 
-				height: 85px !important
-
-
-
-
+	.add-item-btn 
+		width: 282px
+		height: 85px
+		background: #0C5BFF url('/assets/images/add-item-plus.png') no-repeat 12px center
+		margin: 0px 0 30px 0
+		border 0px 
+		color white 
+		font-size 24px
+		font-weight: 300
+		letter-spacing: .5px
+		padding-left: 40px
 
 // Main Nav 
 .nav-container 
@@ -446,8 +480,7 @@ textarea
 	.nav-btn
 		height: 50px
 
-
-
+		
 
 // Login
 
