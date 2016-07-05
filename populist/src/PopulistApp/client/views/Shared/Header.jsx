@@ -13,8 +13,8 @@ export default function Header() {
           the best stuff the world has to offer.
         </div>
         <div className="hero-btns">
-          <RaisedButton label="Default"  />
-          <RaisedButton label="Primary" primary={true}  />
+          <a href="#" className="home-fb-btn"></a>
+          <a href="#" className="home-g-btn"></a>
         </div>
       </div>
     </div>
