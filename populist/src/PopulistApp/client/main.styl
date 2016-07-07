@@ -53,9 +53,12 @@ a
 
 
 .filter-nav 
-	margin-top 20px
+	margin-top 25px
+	margin-bottom 12px
 	padding 0 20px
 	text-align center
+	font-family arial
+	font-weight 100
 	a 
 		display inline-block
 		color #9B9B9B
@@ -125,6 +128,7 @@ a
 		margin: 0 auto
 
 @media (max-width:674px)
+	.list-pick,
 	.home-card 
 		width auto
 		height auto
@@ -153,8 +157,14 @@ a
 		line-height: .9em
 		margin: 5px 0 20px
 
-
-
+@media (max-width:850px) 
+	.hero-container
+		img 
+			width 190px
+			margin-bottom 10px
+		.hero-txt 
+			font-size 30px
+			font-weight: 100
 
 .thumb
 	img 
@@ -365,6 +375,7 @@ textarea
 	color #457BD9 !important
 	font-weight: 200
 	letter-spacing: .4px
+	border 1px solid #979797
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color #CABBBB
 }
@@ -408,13 +419,14 @@ textarea
 		padding-left 10px !important
 		padding-right 10px !important
 		/*padding 20px 80px 20px 90px !important*/
-		border 1px solid #100F0F !important
+		border 1px solid #979797 !important
 		width 100% !important
 		font-size 20px !important
 		background-color white !important
 
 	.create-item input[type=text]
 		padding 20px 80px 20px 90px !important
+
 
 	hr 
 		display none
@@ -538,7 +550,7 @@ textarea
 		padding-right: 0px !important
 
 	.head-logo 
-		background: transparent url('/assets/images/log-head.png') no-repeat center center
+		background: transparent url('/assets/images/populist-logo.svg') no-repeat center center
 		width: 160px
 		height: 60px
 		text-indent: -9999px
@@ -584,7 +596,7 @@ textarea
 			padding-left: 20px !important;
 			padding-right: 52px !important;
 			background-color: white !important;
-			border 1px solid black !important
+			border 1px solid #979797 !important
 			min-width: 385px
 		hr 
 		 display: none !important

@@ -8,12 +8,13 @@ const FeaturedLists = () => (
   <div className="mase-cont">
 
   	<div className="filter-nav body-max">
-  		<a href="#">filter</a>
-  		<a href="#">filter</a>
-  		<a href="#">filter</a>
-  		<a href="#">filter</a>
-  		<a href="#">filter</a>
-  		<a href="#">filter</a>
+  		<a href="#">Found</a>
+  		<a href="#">Books</a>
+  		<a href="#">Electronics</a>
+  		<a href="#">Wine</a>
+  		<a href="#">Music</a>
+  		<a href="#">Apps</a>
+  		<a href="#">Design</a>
   	</div>
 
     <Masonry
