@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="31px" height="25px" viewBox="0 0 31 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_email_white_24dp_2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect x="527" y="531" width="36.984252" height="36.984252" id="rect-1"></rect>
+    </defs>
+    <g id="List-Detail" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop/Front-Facing-List-Bagels" transform="translate(-530.000000, -537.000000)">
+            <g id="ic_email_white_24dp_2x">
+                <image x="527" y="531" width="36.984252" height="36.984252" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAA1teXP8meAAAAm5JREFUaAXtmL9u20AMxuNmtftnb9Ymc7z4LZo+SJH2JQJ0ioM8SIzMQecWaPeiY925QVtnS+L8aOgMikfJliXLGu4AQkeK/PiRJ9qC9vbSSh1IHUgdSB1IHTAdmM/nh8gE+Yfses0gcI0cGZoLtWeNOL7B9hV5ae/tWP9L/lGv1/uheTzTSrY/49o18kLtBfJJNnp5J/AHh1faqUP7GScw0Hy8E3iuHdi/Q34bWxvqlCQnJlHf6LHKDDwgyyUeKH1kjNwvb2xvIznOkQVZmyZmbCwERAUEF+4Nke8WtEH9G1jHIZ9cLba+5+4JKCwgA9zH5wPy34LX0OXn+hTZt6Qspr0f6QTkCkCX/4PX1lFs2T0utdYV0R7+AXbJnVuWR6TjbQsQAOm2dN3r0An2KVJ1/SLgrSWATU74I+KesPWPdAK9AjAvljyjQxuErcqQ54ZUYwk2Ujpj2t/dA/CIlC0hMEainzRsqwhEQyokiBsgF4hgly6XtDYSvaqAkEAeG/s7LWS8IS8b0kqPoObq7isUEAqZsPGGMAx5pSENoEVXl7Q2ErjuCegchUOusWVPUOmQalBvb/EinaBNCgi53CEPSXBaNSMBp/AasAqvRNYpQBJHQ45t7SEVgLJliXtvo3PrtKEuL4Dvs9hLrtGcbILL22iOc04RQKl+E+C2YmwB3ut0W1wayZMKaKSNNUDSCdRoXiOh6QQaaWMNkHQCNZrXSKh3AneNIG8HZGZhvQI+W6cO6TeWi/cuJF+BvyDyLbJL6xYy8nH3pyYVnQAO8vV3hFwj0ZHp4Jb2wmGCRORbyp/SpA6kDqQOpA50uANPjs3KIDREE68AAAAASUVORK5CYII="></image>
+                <use fill="#457BD9" fill-rule="evenodd" xlink:href="#rect-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

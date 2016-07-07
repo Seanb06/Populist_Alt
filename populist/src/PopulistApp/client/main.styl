@@ -180,20 +180,40 @@ a
 		margin-bottom: 30px
 		padding: 60px 30px
 		.likes-corner
+			display: block
 			position: absolute 
-			top 0px;
-			left 0px
+			top 15px;
+			left 10px
 			width: 50px
 			height: 50px
-			background: red
+			text-align: center
+			font-size 13px
+			font-weight: 700 
+			color #E63946
+			text-decoration: none
+			img 
+				width: 32px 
+				height: 27px
 		.save-corner
+			display: block
 			position: absolute 
-			top 0px;
-			right 0px
+			top 15px;
+			right 10px
 			width: 50px
 			height: 50px
-			background: red
-
+			text-align: center
+			font-size 12px
+			font-weight: 700 
+			color #E63946
+			text-decoration: none
+			img 
+				width: 24px 
+				height: 24px
+		.img-likes 
+			margin: 0 auto 5px
+			display: block
+			width: 70px
+			height: 70px
 		.num-likes 
 			text-align: center
 			color #457BD9
@@ -218,12 +238,30 @@ a
 
 			.list-head-social
 				display: inline-block 
-				width: 300px
-				height: 50px 
+				width: auto
 				text-align: center
-				background: blue
 				margin: 20px 0 40px
+				.social-icon
+					width: 60px 
+					height: 60px
+					border 2px solid #457BD9 
+					border-radius 50%
+					display: inline-block 
+					vertical-align: top
+					margin-left 3px 
+					margin-right 3px
+					padding-top: 16px
+				.facebook-icon
+					padding-top: 10px
+				.twitter-icon
+					padding-top: 17px
+				.favorite-icon 
+					padding-top: 17px
 
+		author 
+			color #457BD9
+			font-weight: 700 
+			margin-left: .5em
 		.list-item 
 			h3 
 				font-size: 52px
@@ -284,6 +322,37 @@ a
 		right 15px
 
 
+
+
+@media (max-width:850px)
+	.list-detail-container
+		/*background white*/
+		padding-left: 0px 
+		padding-right: 0px
+		.list-detail-cont 
+			padding: 25px 25px
+			.likes-corner
+				display: none
+			.save-corner
+				display: none
+			.img-likes 
+				width: 62px
+				height: 62px
+			.num-likes 
+				font-size 13px
+			.list-head 
+				.num-head
+					font-size 30px
+				h2 
+					font-size 48px
+					line-height: 1em
+				.list-descr
+					font-size 18px
+			.list-item 
+				h3 
+					font-size 33px
+				p 
+					font-size 18px
 
 
 // List Create 
@@ -625,6 +694,29 @@ textarea
 
 .right-footer 
 	float right
+
+.copyright 
+	display inline
+
+@media (max-width:850px)
+	.main-footer
+		font-size 19px 
+		padding-top: 30px
+		a 
+			display: block
+			margin-bottom 7px
+
+	.left-footer
+		float none
+
+	.right-footer 
+		float none
+
+	.copyright 
+		display: block 
+		padding-top 22px
+		padding-bottom 30px
+
 
 
 .clearfix:after {
