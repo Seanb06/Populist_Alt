@@ -1,4 +1,9 @@
 export const INCREASE = 'INCREASE'
 export const DECREASE = 'DECREASE'
+export const FILTER_BY = 'FILTER_BY'
 export const USER_LOGGING_IN = 'USER_LOGGING_IN';
 export const USER_DATA = 'USER_DATA';
+export const LOGIN_ERROR = 'LOGIN_ERROR';
+export const LOGOUT_ERROR = 'LOGOUT_ERROR';
+export const SIGN_UP_ERROR = 'SIGN_UP_ERROR';
+export const SHOW_NEED_LOGIN_MSG = 'SHOW_NEED_LOGIN_MSG';

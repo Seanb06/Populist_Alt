@@ -2,8 +2,6 @@ import React from 'react'
 
 const Login = () => (
 
-    
-
   <div className="log-block">
     <div className="log-centered">
         <img src="/assets/images/log-logo.png" />
@@ -14,9 +12,6 @@ const Login = () => (
         </div>
     </div>
   </div>
-
-
-    
  
 );
 

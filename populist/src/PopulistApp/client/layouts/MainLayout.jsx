@@ -1,5 +1,5 @@
 import React from 'react'
-import MainNav from '../views/Shared/MainNav'
+import MainNav from '../views/Shared/MainNav/MainNav_container'
 import Footer from '../views/Shared/Footer'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import { muiTheme } from './Theme'

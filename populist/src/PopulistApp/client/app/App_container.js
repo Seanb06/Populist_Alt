@@ -4,15 +4,14 @@ import {bindActionCreators} from 'redux';
 import {logout} from '../actions/auth';
 import App from './App_component';
 
-function mapStateToProps(state) {
-  return {
-    user: state.auth.user,
-    logginIn: state.auth.logginIn,
-  };
-}
+const mapStateToProps = state => ({
+  user: state.auth.user,
+  loggingIn: state.auth.loggingIn,
+})
 
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({logout}, dispatch);
-}
+const mapDispatchToProps = dispatch => (
+  bindActionCreators({logout}, dispatch)
+)
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

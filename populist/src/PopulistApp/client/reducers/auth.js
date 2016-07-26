@@ -1,8 +1,9 @@
-import {USER_LOGGING_IN, USER_DATA} from '../actions/auth';
+import {USER_LOGGING_IN, USER_DATA, SHOW_NEED_LOGIN_MSG} from '../actions/auth';
 
 export const initialState = {
   user: null,
   loggingIn: false,
+  needLoginMsg: false
 };
 
 export default function(state = initialState, action) {
@@ -18,6 +19,12 @@ export default function(state = initialState, action) {
       return Object.assign({}, state, {
         loggingIn: data,
       });
+
+    case SHOW_NEED_LOGIN_MSG:
+      return Object.assign({}, state, {
+        needLoginMsg: true,
+      });
+
 
     default:
       return state;

@@ -9,6 +9,12 @@ import ListCreate from '../views/ListCreate/ListCreate_container'
 import Login from '../views/Login/Login_container'
 import Profile from '../views/Profile/Profile_container'
 
+import { showNeedLoginMsg } from '../actions/auth'
+
+
+import { push } from 'react-router-redux'
+// push('/login')
+
 export default function createRoutes(store) {
 
   function logoutOnEnterHook(nextState, replaceState) {
@@ -17,7 +23,9 @@ export default function createRoutes(store) {
       store.dispatch(logoutAndRedirectHome())
     } else {
       // the user hasn't login yet
-      replaceState(null, '/')
+
+      // this is not working here
+      store.dispatch(push("/login"));
     }
   }
 
@@ -26,7 +34,7 @@ export default function createRoutes(store) {
     console.log("this route will requireAuth");
     if (!store.getState().auth.user) {
       store.dispatch(showNeedLoginMsg())
-      replaceState({ nextPathname: nextState.location.pathname }, '/login')
+      //replaceState({ nextPathname: nextState.location.pathname }, '/login')
     }
   }
 
