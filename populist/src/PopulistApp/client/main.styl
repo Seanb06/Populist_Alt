@@ -53,9 +53,12 @@ a
 
 
 .filter-nav 
-	margin-top 20px
+	margin-top 25px
+	margin-bottom 12px
 	padding 0 20px
 	text-align center
+	font-family arial
+	font-weight 100
 	a 
 		display inline-block
 		color #9B9B9B
@@ -125,6 +128,7 @@ a
 		margin: 0 auto
 
 @media (max-width:674px)
+	.list-pick,
 	.home-card 
 		width auto
 		height auto
@@ -151,10 +155,16 @@ a
 		font-family: arial
 		font-weight 100
 		line-height: .9em
-		margin: 10px 0 20px
+		margin: 5px 0 20px
 
-
-
+@media (max-width:850px) 
+	.hero-container
+		img 
+			width 190px
+			margin-bottom 10px
+		.hero-txt 
+			font-size 30px
+			font-weight: 100
 
 .thumb
 	img 
@@ -180,20 +190,40 @@ a
 		margin-bottom: 30px
 		padding: 60px 30px
 		.likes-corner
+			display: block
 			position: absolute 
-			top 0px;
-			left 0px
+			top 15px;
+			left 10px
 			width: 50px
 			height: 50px
-			background: red
+			text-align: center
+			font-size 13px
+			font-weight: 700 
+			color #E63946
+			text-decoration: none
+			img 
+				width: 32px 
+				height: 27px
 		.save-corner
+			display: block
 			position: absolute 
-			top 0px;
-			right 0px
+			top 15px;
+			right 10px
 			width: 50px
 			height: 50px
-			background: red
-
+			text-align: center
+			font-size 12px
+			font-weight: 700 
+			color #E63946
+			text-decoration: none
+			img 
+				width: 24px 
+				height: 24px
+		.img-likes 
+			margin: 0 auto 5px
+			display: block
+			width: 70px
+			height: 70px
 		.num-likes 
 			text-align: center
 			color #457BD9
@@ -218,12 +248,30 @@ a
 
 			.list-head-social
 				display: inline-block 
-				width: 300px
-				height: 50px 
+				width: auto
 				text-align: center
-				background: blue
 				margin: 20px 0 40px
+				.social-icon
+					width: 60px 
+					height: 60px
+					border 2px solid #457BD9 
+					border-radius 50%
+					display: inline-block 
+					vertical-align: top
+					margin-left 3px 
+					margin-right 3px
+					padding-top: 16px
+				.facebook-icon
+					padding-top: 10px
+				.twitter-icon
+					padding-top: 17px
+				.favorite-icon 
+					padding-top: 17px
 
+		author 
+			color #457BD9
+			font-weight: 700 
+			margin-left: .5em
 		.list-item 
 			h3 
 				font-size: 52px
@@ -286,10 +334,69 @@ a
 
 
 
+@media (max-width:850px)
+	.list-detail-container
+		/*background white*/
+		padding-left: 0px 
+		padding-right: 0px
+		.list-detail-cont 
+			padding: 25px 25px
+			.likes-corner
+				display: none
+			.save-corner
+				display: none
+			.img-likes 
+				width: 62px
+				height: 62px
+			.num-likes 
+				font-size 13px
+			.list-head 
+				.num-head
+					font-size 30px
+				h2 
+					font-size 48px
+					line-height: 1em
+				.list-descr
+					font-size 18px
+			.list-item 
+				h3 
+					font-size 33px
+				p 
+					font-size 18px
+
+
 // List Create 
 
 textarea 
 	width: 100%
+	resize: none
+	font-size 25px
+	padding 15px 15px
+	color #457BD9 !important
+	font-weight: 200
+	letter-spacing: .4px
+	border 1px solid #979797
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color #CABBBB
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color #CABBBB
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color #CABBBB
+}
+:-moz-placeholder { /* Firefox 18- */
+  color #CABBBB
+}
+
+
+.create-item
+	.form-holder 
+		>div 
+			height: 85px !important
+
+
+
 
 .create-header
 	background #457BD9
@@ -300,9 +407,70 @@ textarea
 		margin: 0
 		font-weight: 100
 		font-size 72px
+	span 
+		margin-right 20px
+		font-size 12px
+		text-transform uppercase
 
 .create-body
 	position: relative 
+
+	input[type=text]
+		padding-left 10px !important
+		padding-right 10px !important
+		/*padding 20px 80px 20px 90px !important*/
+		border 1px solid #979797 !important
+		width 100% !important
+		font-size 20px !important
+		background-color white !important
+
+	.create-item input[type=text]
+		padding 20px 80px 20px 90px !important
+
+
+	hr 
+		display none
+
+	.form-holder 
+		margin-bottom 20px
+		position relative
+		div 
+			width 100% !important
+			
+			@media (min-width:851px)
+				max-width: 650px
+
+
+
+		.num
+			position: absolute 
+			left 10px 
+			top 14px
+			color #457BD9
+			font-size 60px
+			font-weight: 700
+			width 50px !important
+			height 60px !important
+			display: block
+			letter-spacing: -3px
+			line-height: .85em
+		.subtract
+			position: absolute 
+			right 10px
+			top 24px
+			text-decoration: none
+			display: block
+			width 40px
+			height: 40px
+			border-radius: 50%
+			background: #ccc
+			color white
+			text-align: center 
+			font-size 50px
+			line-height: 34px
+			@media (min-width:851px) 
+				right: auto 
+				left 594px
 
 	.list-status 
 		position: absolute 
@@ -311,6 +479,7 @@ textarea
 		width: 160px
 		height: 80px
 		background: blue
+		display: none
 
 	h3 
 		color #E63946 
@@ -352,17 +521,25 @@ textarea
 			min-height: 180px
 
 
+	.create-location
+		.form-holder 
+			>div 
+				position: relative
+				@media (min-width:851px)
+					width: 300px !important
 
 
-
-
-
-
-
-
-
-
-
+	.add-item-btn 
+		width: 282px
+		height: 85px
+		background: #0C5BFF url('/assets/images/add-item-plus.png') no-repeat 12px center
+		margin: 0px 0 30px 0
+		border 0px 
+		color white 
+		font-size 24px
+		font-weight: 300
+		letter-spacing: .5px
+		padding-left: 40px
 
 // Main Nav 
 .nav-container 
@@ -373,24 +550,92 @@ textarea
 		padding-right: 0px !important
 
 	.head-logo 
-		background: transparent url('/assets/images/log-head.png') no-repeat center center
+		background: transparent url('/assets/images/populist-logo.svg') no-repeat center center
 		width: 160px
 		height: 60px
 		text-indent: -9999px
 
 	.nav-sel 
-		height: 50px
+		height: 50px !important
 		background-color: #D8D8D8
 		font-size: 18px !important
-		margin: 10px 10px 0 15px
+		margin: 10px 15px 0 15px !important
+		font-family 'Raleway', sans-serif !important
 		svg 
 			fill black !important
+			div
+				color #3A506B !important
+
+
+
+  
 
 	.nav-btn
+		font-family 'Raleway', sans-serif !important
 		height: 50px
+		border-radius: 0px !important
+		text-transform: none !important
+		margin-top: 10px !important
+		a,
+		div,
+		span,
+		div div
+			font-size: 18px !important
+			border-radius: 0px !important
+			text-transform: none !important
+			font-family 'Raleway', sans-serif !important
 
 
 
+
+	.nav-srch
+		min-width: 385px
+		margin: 10px 0 0 0 
+		position: relative
+		input 
+			padding-left: 20px !important;
+			padding-right: 52px !important;
+			background-color: white !important;
+			border 1px solid #979797 !important
+			min-width: 385px
+		hr 
+		 display: none !important
+		button 
+			z-index: 3 
+			position: absolute
+			right: 16px
+			top 7px
+			width: 31px
+			height: 31px
+			display: block
+			text-indent: -9999px
+			background-color transparent 
+			border 0px
+			background: transparent url('/assets/images/search-glass.png') no-repeat center center
+
+	.nav-create-btn
+  	width: 215px !important
+  	background: #457BD9 !important
+
+  .nav-sign-btn
+  	width: 110px !important
+  	background: #9B9B9B !important
+
+
+
+.home-fb-btn
+	width: 95px 
+	height: 35px
+	display: inline-block
+	margin: 0 3px
+	background: transparent url('/assets/images/facebook-signin.png') no-repeat center center
+
+.home-g-btn
+	width: 95px 
+	height: 35px
+	display: inline-block
+	margin: 0 3px
+	background: transparent url('/assets/images/gplus-signin.png') no-repeat center center
 
 // Login
 
@@ -461,6 +706,29 @@ textarea
 
 .right-footer 
 	float right
+
+.copyright 
+	display inline
+
+@media (max-width:850px)
+	.main-footer
+		font-size 19px 
+		padding-top: 30px
+		a 
+			display: block
+			margin-bottom 7px
+
+	.left-footer
+		float none
+
+	.right-footer 
+		float none
+
+	.copyright 
+		display: block 
+		padding-top 22px
+		padding-bottom 30px
+
 
 
 .clearfix:after {

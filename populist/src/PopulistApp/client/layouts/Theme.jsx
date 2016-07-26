@@ -20,7 +20,9 @@ export const muiTheme = getMuiTheme({
       height: 50,
       minWidth: 88,
   },
-
+  radioButton: {
+      size: 34,
+  }
   
 });
 

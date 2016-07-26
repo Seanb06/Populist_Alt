@@ -10,7 +10,7 @@ export default function Footer() {
 		</div>
 		<div className="right-footer right">
 	  		<a href="#">Privacy Policy</a>
-	  		&copy; Populist Labs 2016
+	  		<div className="copyright">&copy; Populist Labs 2016</div>
 		</div>
     </div>
   )

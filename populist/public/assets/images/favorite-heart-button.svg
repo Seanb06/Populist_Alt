@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="29px" height="24px" viewBox="0 0 29 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>favorite-heart-button</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="14.2638158 0.448 0.106578947 0.448 0.106578947 23.9984 28.4210526 23.9984 28.4210526 0.448 14.2638158 0.448"></polygon>
+    </defs>
+    <g id="List-Detail" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop/Front-Facing-List-Bagels-Copy" transform="translate(-925.000000, -540.000000)">
+            <g id="favorite-heart-button" transform="translate(925.000000, 540.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-2"></g>
+                <path d="M14.2105263,23.9984 L12.2192763,22.2112 C4.82980263,16.3232 0,12.3536 0,7.4848 C0,3.5232 3.41407895,0.448 7.81223684,0.448 C10.2351316,0.448 12.6491447,1.4736 14.2105263,3.136 C15.7719079,1.4736 18.1859211,0.448 20.6088158,0.448 C25.0069737,0.448 28.4210526,3.5232 28.4210526,7.4848 C28.4210526,12.3536 23.59125,16.3232 16.2017763,22.2112 L14.2105263,23.9984 Z" id="Fill-1" fill="#E63946" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

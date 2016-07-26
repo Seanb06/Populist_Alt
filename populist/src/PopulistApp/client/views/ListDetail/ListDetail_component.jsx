@@ -14,9 +14,15 @@ const ListContent = ({listDetail}) => (
 let ListDetail = ({listDetail, listId}) => (
   <div className="list-detail-container body-max clearfix">
     <div className="list-detail-cont">
-      <div className="likes-corner"></div>
-      <div className="save-corner"></div>
-
+      <a href="#" className="likes-corner">
+        <img src="/assets/images/favorite-heart-button.svg" className="" role="img" alt="" />
+        <div className="">135</div>
+      </a>
+      <a href="#" className="save-corner">
+        <img src="/assets/images/add-icon.svg" className="" role="img" alt="" />
+        <div className="">SAVE</div>
+      </a>
+      <img src="/assets/images/fork-knife.svg" className="img-likes food-likes" role="img" alt="" />
       <div className="num-likes">143 Likes</div>
       <div className="list-head">
         <div className="num-head">The Five Best...</div>
@@ -24,7 +30,24 @@ let ListDetail = ({listDetail, listId}) => (
         <div className="list-descr">I've tried a ton of bagels in the city but these are the ones that I will wake up early to get. Lorum ipsum ipsum lorem to the blank.
           <author>By Kate Miller</author>
         </div>
-        <div className="list-head-social"></div>
+        <div className="list-head-social">
+          <a href="#" className="social-icon facebook-icon">
+            <img src="/assets/images/facebook-logo.svg" className="" role="img" alt="facebook" />
+          </a>
+          <a href="#" className="social-icon twitter-icon">
+            <img src="/assets/images/twitter-logo.svg" className="" role="img" alt="twitter" />
+          </a>
+          <a href="#" className="social-icon email-icon">
+            <img src="/assets/images/email-icon2.svg" className="" role="img" alt="email" />
+          </a>
+          <a href="#" className="social-icon favorite-icon">
+            <img src="/assets/images/favorite-heart-button.svg" className="" role="img" alt="favorite" />
+          </a>
+          <a href="#" className="social-icon add-icon">
+            <img src="/assets/images/add-icon.svg" className="" role="img" alt="add" />
+          </a>
+
+        </div>
       </div>
            
       <div className="list-item">

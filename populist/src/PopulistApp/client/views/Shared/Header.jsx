@@ -7,14 +7,14 @@ export default function Header() {
   return ( 
     <div className="body-max">
       <div className="hero-container">
-        <img src="/assets/images/log-hero.png" />
+        <img src="/assets/images/populist-hero.svg" role="img" />
         <div className="hero-txt">
           Create, share and discover<br />
           the best stuff the world has to offer.
         </div>
         <div className="hero-btns">
-          <RaisedButton label="Default"  />
-          <RaisedButton label="Primary" primary={true}  />
+          <a href="#" className="home-fb-btn"></a>
+          <a href="#" className="home-g-btn"></a>
         </div>
       </div>
     </div>

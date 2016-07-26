@@ -3,6 +3,7 @@ import Header from '../Shared/Header';
 import { Grid, Row, Col } from 'react-flexbox-grid/lib/index';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
+import RaisedButton from 'material-ui/RaisedButton';
 import { Link } from 'react-router';
 import FeaturedLists from '../FeaturedLists/FeaturedLists_container'
 var Masonry = require('react-masonry-component');
@@ -63,6 +64,7 @@ const Home = ({lists}) => (
               containerElement={<Link to={'/list/'+_id } />}
               linkButton={true}
               label={_id}/>
+
             }
           </CardActions>
         </Card>

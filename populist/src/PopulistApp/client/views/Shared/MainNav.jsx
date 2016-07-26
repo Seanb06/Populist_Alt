@@ -17,7 +17,8 @@ var toolbarStyle = {
 var navBtnStyle = {
   "margin": '0px 0px 0px 10px',
   "borderRadius": '0px',
-  "textTransform": 'none'
+  "textTransform": 'none',
+
 };
 export class MainNav extends React.Component {
 
@@ -46,7 +47,8 @@ export class MainNav extends React.Component {
             <MenuItem value={7} primaryText="Category" />
           </DropDownMenu>
           <div className="nav-srch"> 
-            <TextField hintText="Search the best" />
+            <TextField placeholder="Search the best" />
+            <button>Search</button>
           </div>
         </ToolbarGroup>
 
