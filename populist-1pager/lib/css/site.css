@@ -1,0 +1,342 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+	background-color: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body, body>* {
+    line-height: 1.4;
+}
+
+body>* {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+}
+
+a {
+	text-decoration: none;
+}
+
+.main-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.max-mod {
+	max-width: 1140px;
+	max-width: 900px;
+	margin: 0 auto;
+	/*outline: 1px solid red;*/
+}
+
+
+.the-nav {
+	background: #1D3557;
+	height: 54px;
+}
+
+
+.hero-head {
+	display: block;
+	position: relative;
+	height: 750px;
+	width: 100%;
+	background: transparent url("../images/labs-hero.jpg") no-repeat center 40%;
+    background-size: cover;
+    margin-top: 20px;
+}
+
+.speak-logo {
+	position: absolute;
+	width: 194px;
+	height: 60px;
+	left: 50%;
+	margin-left: -96px;
+	top: 50px;
+}
+
+.nav-logo {
+	display: block;
+	position: absolute;
+	background: transparent url("../images/populist-logo.svg") no-repeat center center;
+	text-indent: -9999px;
+	width: 148px;
+	height: 28px;
+	top: 13px;
+	left: 10px;
+}
+
+ul.main-nav {
+	float: right;
+	list-style: none;
+	margin: 25px 15px 0 0;
+	padding: 0px;
+	font-family: Myriad Pro;
+	height: auto;
+}
+
+ul.main-nav li {
+	display: inline-block;
+	margin: 0 10px;
+}
+
+ul.main-nav li a {
+	display: inline-block;
+	color: #9B9B9B;
+	font-size: 10px;
+	font-weight: 600;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.hero-txt {
+	color: #efe9cf;
+	font-size: 60px;
+	font-weight: 600;
+	text-align: center;
+	padding-top: 130px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+	line-height: 1em;
+}
+
+
+@media (max-width:800px) {
+
+	.hero-head {
+		height: 280px;
+		background-position: center center;
+		margin-top: 180px;
+	}
+
+	.speak-logo {
+		top: -120px;
+		margin-top: 0px;
+	}
+
+	.hero-txt {
+		font-size: 29px;
+		padding-top: 3%;
+	}
+
+	ul.main-nav {
+		margin-right: 10px;
+	}
+
+	ul.main-nav li {
+		display: inline-block;
+		margin: 0 3px;
+	}
+
+}
+
+
+
+.about-us {
+	padding: 40px 0px 35px;
+	line-height: 1.25em;
+}
+
+.about-us .max-mod {
+/*	max-width: 900px;*/
+	background: #1D3557;
+	color: white;
+}
+
+
+.about-us h3 {
+	font-size: 60px;
+	font-weight: 100;
+	text-align: center;
+	margin: 10px;
+	padding-top: 60px;
+	padding-bottom: 50px;
+}
+
+.about-col {
+	width: 50%;
+	margin-right: -4px;
+	vertical-align: top;
+	display: inline-block;
+	padding: 0px 6% 5%;
+	text-align: center;
+	font-size: 12px;
+	font-weight: 100;
+}
+
+.about-col img {
+	border-radius: 50%;
+}
+
+.about-col h4 {
+	font-size: 24px;
+	font-weight: 100;
+	margin: 18px 0 0;
+}
+
+.about-col h5 {
+	margin: 0px 0px 5px;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.about-col p {
+	margin: 0px 0px 1.5em;
+}
+
+
+@media (max-width:800px) {
+
+	.about-us h3 {
+		font-size: 45px;
+	}
+
+	.about-col {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+}
+
+
+
+
+
+
+.populist {
+	display: block;
+	position: relative;
+	height: 610px;
+	width: 100%;
+	background: transparent url("../images/labs-hero2.jpg") no-repeat right top;
+    background-size: cover;
+    margin-top: 20px;
+    color: white;
+    padding: 30px;
+}
+
+.populist .bar {
+	width: 250px;
+	font-size: 12px;
+	font-weight: 100;
+	line-height: 1.55em;
+}
+
+.populist .bar .top {
+	background: #457BD9;
+	padding: 20px;
+	text-align: center;
+}
+
+.populist .bar .top h4 {
+	font-size: 45px;
+	font-weight: 100;
+	padding: 20px 5px;
+	margin: 0px;
+}
+
+.visit-btn {
+	display: block;
+	background: #1D3557;
+	height: 60px;
+	text-align: center;
+	color: white;
+	text-decoration: none;
+	font-size: 24px;
+	padding: 20px 0 0;
+	margin-top: 24px;
+}
+
+.populist .thumb {
+	display: none;
+}
+
+
+
+@media (max-width:800px) {
+
+	.populist {
+		background: none;
+		background-color: #457BD9;
+		padding: 0px 0px 40px;
+		height: auto;
+	}
+
+	.populist .thumb {
+		display: block;
+		background: transparent url("../images/labs-hero2.jpg") no-repeat center center;
+    	background-size: cover;
+    	height: 387px;
+	}
+
+	.populist .bar {
+		width: 100%;
+	}
+
+	.visit-btn {
+		margin: 24px 14% 0;
+	}
+
+}
+
+
+
+
+
+/*FOOTER*/
+.footer {
+	background: #1D3557;
+	min-height: 96px;
+	margin-top: 60px;
+	color: white;
+	padding: 20px 20px;
+}
+
+.footer .contact {
+	float: left;
+	color: white;
+	font-size: 33px;
+	font-weight: 100;
+}
+
+.footer .copy {
+	float: right;
+	font-size: 10px;
+	padding-top: 20px;
+}
+
+
+@media (max-width:800px) {
+
+	.footer .contact {
+		float: none;
+	}
+
+	.footer .copy {
+		float: none;
+		padding: 10px 0 0 0;
+	}
+
+}
+
+
+
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; }
+*:first-child+html .clearfix { zoom: 1; } 

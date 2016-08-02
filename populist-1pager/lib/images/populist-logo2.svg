@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="194px" height="59px" viewBox="0 0 194 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="194" height="59"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="194" height="59" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-Copy-2" transform="translate(-414.000000, -109.000000)">
+            <g id="Group" transform="translate(414.000000, 109.000000)">
+                <use id="Rectangle-3" stroke="#1D3557" mask="url(#mask-2)" stroke-width="10" xlink:href="#path-1"></use>
+                <text id="POPULIST-LABS" font-family="Tungsten-Medium, Tungsten" font-size="42" font-weight="400" letter-spacing="0.5" fill="#1D3557">
+                    <tspan x="12.184" y="44">POPULIST LAB</tspan>
+                    <tspan x="167.2" y="44">S</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

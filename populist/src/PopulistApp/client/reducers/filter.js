@@ -5,8 +5,15 @@ const initialState = {
 }
 
 export default function (state = initialState, action) {
-  if(action.type === FILTER_BY) {
-    return { category: state.category }
+  const {category, type} = action;
+  switch (type) {
+    case FILTER_BY:
+      return Object.assign({}, state, {
+        category: category,
+      });
+
+    default:
+      return state;
   }
-  return state
+
 }
