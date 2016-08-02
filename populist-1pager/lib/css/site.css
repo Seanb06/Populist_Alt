@@ -66,10 +66,11 @@ a {
 .nav-logo {
 	display: block;
 	position: absolute;
-	background: transparent url("../images/populist-logo.svg") no-repeat center center;
+	background: transparent url("../images/POPULISTLABS.svg") no-repeat center center;
 	text-indent: -9999px;
-	width: 148px;
+	width: 152px;
 	height: 28px;
+	background-size: 152px 28px;
 	top: 13px;
 	left: 10px;
 }
@@ -192,6 +193,12 @@ ul.main-nav li a {
 	margin: 0px 0px 1.5em;
 }
 
+.about-col a {
+	color: white;
+	font-weight: 600;
+	margin-left: 3px;
+	margin-right: 3px;
+}
 
 @media (max-width:800px) {
 
