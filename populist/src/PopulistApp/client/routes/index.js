@@ -3,6 +3,7 @@ import { Route, IndexRoute } from 'react-router'
 import App from '../app/App_container'
 import MainLayout from '../layouts/MainLayout'
 import LoginLayout from '../layouts/LoginLayout'
+import ComingSoonLayout from '../layouts/ComingSoonLayout'
 import Home from '../views/Home/Home_container'
 import ComingSoon from '../views/ComingSoon/ComingSoon_container'
 import ListDetail from '../views/ListDetail/ListDetail_container'
@@ -43,14 +44,17 @@ export default function createRoutes(store) {
   return (
     <Route path="/" component={App}>
 
-
+      <Route component={ComingSoonLayout}>
+        <IndexRoute component={ComingSoon} />
+      </Route>
+      
       <Route component={LoginLayout}>
         <IndexRoute component={ComingSoon} />
         <Route path="login" component={Login} isLogin />
         <Route path="signup" component={Login} isLogin={false} />
         <Route path="logout" onEnter={logoutOnEnterHook} />
       </Route>
-      
+
       <Route component={MainLayout}>
         <Route path="/home" component={Home} />
         <Route path="/list/:listId" component={ListDetail} />
