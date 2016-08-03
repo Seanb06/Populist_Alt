@@ -4,6 +4,7 @@ import App from '../app/App_container'
 import MainLayout from '../layouts/MainLayout'
 import LoginLayout from '../layouts/LoginLayout'
 import Home from '../views/Home/Home_container'
+import ComingSoon from '../views/ComingSoon/ComingSoon_container'
 import ListDetail from '../views/ListDetail/ListDetail_container'
 import ListCreate from '../views/ListCreate/ListCreate_container'
 import Login from '../views/Login/Login_container'
@@ -41,18 +42,23 @@ export default function createRoutes(store) {
 
   return (
     <Route path="/" component={App}>
+
+
+      <Route component={LoginLayout}>
+        <IndexRoute component={ComingSoon} />
+        <Route path="login" component={Login} isLogin />
+        <Route path="signup" component={Login} isLogin={false} />
+        <Route path="logout" onEnter={logoutOnEnterHook} />
+      </Route>
+      
       <Route component={MainLayout}>
-        <IndexRoute component={Home} />
+        <Route path="/home" component={Home} />
         <Route path="/list/:listId" component={ListDetail} />
         <Route path="/create" component={ListCreate} onEnter={requireAuth} />
         <Route path="/profile" component={Profile} onEnter={requireAuth} />
       </Route>
 
-      <Route component={LoginLayout}>
-        <Route path="login" component={Login} isLogin />
-        <Route path="signup" component={Login} isLogin={false} />
-        <Route path="logout" onEnter={logoutOnEnterHook} />
-      </Route>
+      
     </Route>
   )
 }
