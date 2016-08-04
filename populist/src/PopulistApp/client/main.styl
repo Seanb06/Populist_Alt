@@ -34,8 +34,10 @@ body
 	color white
 // END REMOVE FOR OTHER PAGES
   
-#comingSoon
+#comingSoon 
+
 	background-color #457bd9
+
 	a
 	  text-decoration none
 
@@ -68,64 +70,55 @@ body
 	  padding 0 10%
 	  font-family Raleway
 
-	.btn-holder
-	  a
-	    display block
-	    width 300px
-	    height 58px
-	    margin 10px auto
-	    &:hover
-	      opacity .9
-	  
-	span
-	  font-size 80px
-	  font-weight 100
-	  line-height .8em
-	  margin-top 30px
+	.btn-holder a
 	  display block
-	  font-family Raleway
+	  width 300px
+	  height 58px
+	  margin 10px auto
 
-	@media (min-width:900px)
-	  h1
-	    margin-top 120px
-	  p
-	    max-width 700px
-	    margin-left auto
-	    margin-right auto
-	    padding 0px
-	    font-size 40px
-	    line-height 1em
-	  .btn-holder
-	    a
-	      display inline-block
-	      vertical-align top
-	      margin 10px 8px
-	  span
-	    margin-top 0px
-	    line-height 1.3em
 
-	.clearfix
-	  &:after
-	    visibility hidden
-	    display block
-	    font-size 0
-	    content " "
-	    clear both
-	    height 0
-
-	*:first-child
-	  & + html
-	    .clearfix
-	      zoom 1
+	.btn-holder a:hover
+	      opacity .9
 
 	.facebook
 	  background transparent url("/assets/images/facebook.png") no-repeat center center
-	  text-indent -9999px
+	  text-indent -9999px !important
 
 	.twitter
 	  background transparent url("/assets/images/twitter.png") no-repeat center center
 	  text-indent -9999px
-  
+	  
+	span
+	  font-size 70px
+	  font-weight 100
+	  line-height 1.2em
+	  margin-top 20px
+	  display block
+	  font-family Raleway
+
+@media (min-width:900px) 
+
+	#comingSoon 
+		 h1
+		    margin-top 120px
+		 p
+		    max-width 700px
+		    margin-left auto
+		    margin-right auto
+		    padding 0px
+		    font-size 40px
+		    line-height 1em
+		 .btn-holder
+		    a
+		      display inline-block
+		      vertical-align top
+		      margin 10px 8px
+		 span
+		    margin-top 10px
+		    line-height 1.3em
+		    font-size 80px
+
+	
 
  //END COMING SOON
 

@@ -9,7 +9,7 @@ const ComingSoon = () => (
             <p>Create, share and discover the best stuff the world has to offer.</p>
         </div>
 
-        <div class="btn-holder">
+        <div className="btn-holder">
             <a href="https://www.facebook.com/populists/" className="facebook" target="_blank">Follow us on Facebook</a>
             <a href="https://twitter.com/PopulistTweet" className="twitter" target="_blank">Follow us on Twitter</a>
         </div>
