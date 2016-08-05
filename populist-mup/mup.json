@@ -1,0 +1,28 @@
+{
+  "servers": [
+    {
+      "host": "54.235.116.5",
+      "username": "ubuntu",
+      "pem": "~/Desktop/ec2_keys/populist-key.pem",
+      
+      "env": {}
+    }
+  ],
+
+  "setupMongo": true,
+
+  "appName": "populist",
+
+  "app": "/Users/carrita/Documents/ckisadj/5best/populist-webpack/populist",
+
+  "env": {
+    "PORT": 80,
+    "ROOT_URL": "http://popu-lists.com/",
+    "MONGO_URL": "mongodb://populist_admin:GEkyMCM8DtiigxHtQ2Mg@candidate.32.mongolayer.com:10824,candidate.33.mongolayer.com:10838/populist-prod?replicaSet=set-551c4f727f82d7ec630018cf",
+    "MONGO_OPLOG_URL": "mongodb://populist_oplog:N6TnmDQTXAAGXYUuEo2x@candidate.32.mongolayer.com:10824,candidate.33.mongolayer.com:10838/local?replicaSet=set-551c4f727f82d7ec630018cf&authSource=populist-prod"
+  },
+
+  "deployCheckWaitTime": 15,
+
+  "enableUploadProgressBar": true
+}
