@@ -45,18 +45,17 @@ export default function createRoutes(store) {
     <Route path="/" component={App}>
 
       <Route component={ComingSoonLayout}>
-        <IndexRoute component={ComingSoon} />
+        {/*<IndexRoute component={ComingSoon} />*/}
       </Route>
       
       <Route component={LoginLayout}>
-        <IndexRoute component={ComingSoon} />
         <Route path="login" component={Login} isLogin />
         <Route path="signup" component={Login} isLogin={false} />
         <Route path="logout" onEnter={logoutOnEnterHook} />
       </Route>
 
       <Route component={MainLayout}>
-        <Route path="/home" component={Home} />
+        <IndexRoute component={Home} />
         <Route path="/list/:listId" component={ListDetail} />
         <Route path="/create" component={ListCreate} onEnter={requireAuth} />
         <Route path="/profile" component={Profile} onEnter={requireAuth} />

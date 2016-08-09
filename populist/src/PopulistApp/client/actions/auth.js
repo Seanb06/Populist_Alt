@@ -12,8 +12,6 @@ export function loginWithFacebook() {
       if (err) {
         alert('Error while login with facebook: ' + err.message)
         dispatch(loginError(err.message))
-      // } else {
-      //   dispatch(loggedIn())
       }
     })
   }

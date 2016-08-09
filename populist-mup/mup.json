@@ -22,7 +22,7 @@
     "MONGO_OPLOG_URL": "mongodb://populist_oplog:N6TnmDQTXAAGXYUuEo2x@candidate.32.mongolayer.com:10824,candidate.33.mongolayer.com:10838/local?replicaSet=set-551c4f727f82d7ec630018cf&authSource=populist-prod"
   },
 
-  "deployCheckWaitTime": 15,
+  "deployCheckWaitTime": 120,
 
   "enableUploadProgressBar": true
 }

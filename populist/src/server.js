@@ -28,11 +28,19 @@ Meteor.startup(function(){
   });
 
 
+  //console.log(process.env.GOOGLE_CLIENT_KEY, process.env.GOOGLE_SECRET);
   ServiceConfiguration.configurations.remove ({service: "google"});
   ServiceConfiguration.configurations.insert({
     service: "google",
-    consumerKey: process.env.GOOGLE_CLIENT_KEY,
+    clientId: process.env.GOOGLE_CLIENT_KEY,
     secret: process.env.GOOGLE_SECRET
+  });
+
+  ServiceConfiguration.configurations.remove({service: 'facebook'});
+  ServiceConfiguration.configurations.insert({
+      service: 'facebook',
+      appId: process.env.FACEBOOK_APP_ID,
+      secret: process.env.FACEBOOK_SECRET
   });
     
   
