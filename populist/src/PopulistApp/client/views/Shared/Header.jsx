@@ -7,14 +7,13 @@ export default function Header() {
   return ( 
     <div className="body-max">
       <div className="hero-container">
-        <img src="/assets/images/populist-hero.svg" role="img" />
+        <h2><span>List it,</span> <span>Save it,</span> <span>Share it</span>.</h2>
         <div className="hero-txt">
-          Create, share and discover<br />
-          the best stuff the world has to offer.
+          Never lose those favorite restaurants, best books or recommended shops again.<br /> 
+Make a list, get likes and discover related finds!
         </div>
         <div className="hero-btns">
-          <a href="#" className="home-fb-btn"></a>
-          <a href="#" className="home-g-btn"></a>
+          <a href="/create" className="hero-create-list">Create a list now</a>
         </div>
       </div>
     </div>

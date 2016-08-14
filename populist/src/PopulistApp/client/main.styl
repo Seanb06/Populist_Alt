@@ -26,101 +26,9 @@ body
 	min-height 100vh
 	
 	
-//COMING SOON
-
-// REMOVE FOR OTHER PAGES
-body
-	background-color #457bd9
-	color white
-// END REMOVE FOR OTHER PAGES
-  
-#comingSoon 
-
-	background-color #457bd9
-
-	a
-	  text-decoration none
-
-	.main-container
-	  width 100%
-	  height 100%
-	  overflow hidden
-	  padding 0px
-	  text-align center
-
-	.max-mod
-	  max-width 1140px
-	  max-width 900px
-	  margin 0 auto
-
-	h1
-	  width 242px
-	  height 94px
-	  background transparent url("/assets/images/logo.png") no-repeat center center
-	  display block
-	  margin 40px auto 0
-	  text-indent -9999px
-	  padding 0
-
-	p
-	  font-size 30px
-	  font-weight 100
-	  line-height 1.2em
-	  margin 20px 0 30px
-	  padding 0 10%
-	  font-family Raleway
-
-	.btn-holder a
-	  display block
-	  width 300px
-	  height 58px
-	  margin 10px auto
 
 
-	.btn-holder a:hover
-	      opacity .9
 
-	.facebook
-	  background transparent url("/assets/images/facebook.png") no-repeat center center
-	  text-indent -9999px !important
-
-	.twitter
-	  background transparent url("/assets/images/twitter.png") no-repeat center center
-	  text-indent -9999px
-	  
-	span
-	  font-size 70px
-	  font-weight 100
-	  line-height 1.2em
-	  margin-top 20px
-	  display block
-	  font-family Raleway
-
-@media (min-width:900px) 
-
-	#comingSoon 
-		 h1
-		    margin-top 120px
-		 p
-		    max-width 700px
-		    margin-left auto
-		    margin-right auto
-		    padding 0px
-		    font-size 40px
-		    line-height 1em
-		 .btn-holder
-		    a
-		      display inline-block
-		      vertical-align top
-		      margin 10px 8px
-		 span
-		    margin-top 10px
-		    line-height 1.3em
-		    font-size 80px
-
-	
-
- //END COMING SOON
 
 #mount,
 .container-bg
@@ -151,15 +59,31 @@ a
 	margin-bottom 12px
 	padding 0 20px
 	text-align center
-	font-family arial
+	font-family: 'Lato', sans-serif;
 	font-weight 100
 	a 
 		display inline-block
 		color #9B9B9B
 		font-size 20px 
 		margin 0 10px
-		font-weight 100
+		font-weight 600
 		text-decoration none
+
+
+.filter-desktop
+	display block
+
+.filter-mobile
+	display none
+
+@media (max-width:674px)
+
+	.filter-desktop
+		display: none
+
+	.filter-mobile
+		display: block
+
 
 .mase-cont 
 	/*border 1px solid rgba(215,215,215,0.01)*/
@@ -227,6 +151,9 @@ a
 		width auto
 		height auto
 
+	.list-pick
+		display: none
+
 	.card-grid > div 
 		position: relative !important
 		top auto !important
@@ -239,26 +166,58 @@ a
 
 
 .hero-container
-	background white 
+	background #0C5BFF
+	color white
 	text-align center
 	padding 30px 15px 15px
 
+	h2 
+		font-size 84px
+		margin: 0
+		font-weight: 300
+		span 
+			white-space: nowrap
+
 	.hero-txt 
-		color #4A90E2
-		font-size: 47px
-		font-family: arial
+		color white
+		font-size: 26px
 		font-weight 100
-		line-height: .9em
+		line-height: 1.2em
 		margin: 5px 0 20px
+		letter-spacing: .5px
+
+	.hero-create-list {
+		display inline-block
+		background white 
+		color #FE3C19 
+		text-decoration none 
+		font-weight bold
+		text-align center 
+		font-size 28px
+		padding 14px 30px
+		margin-bottom 10px
+	}
 
 @media (max-width:850px) 
 	.hero-container
 		img 
 			width 190px
 			margin-bottom 10px
+
+		h2 
+			font-size 54px
+			line-height: 1em
+
 		.hero-txt 
-			font-size 30px
+			font-size 14px
 			font-weight: 100
+			line-height: 1.25em
+
+		.hero-create-list 
+			font-size 20px 
+			color white 
+			background: #FE3C19
+			font-weight: 300
 
 .thumb
 	img 
@@ -692,6 +651,9 @@ textarea
 			background-color: white !important;
 			border 1px solid #979797 !important
 			min-width: 385px
+			font-family: 'Raleway', sans-serif !important
+			font-weight: 100 !important
+
 		hr 
 		 display: none !important
 		button 

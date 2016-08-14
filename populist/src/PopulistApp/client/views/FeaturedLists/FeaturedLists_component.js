@@ -1,5 +1,6 @@
 import React from 'react'
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
+import DropDownMenu from 'material-ui/DropDownMenu';
 import FlatButton from 'material-ui/FlatButton';
 import { Link } from 'react-router';
 var Masonry = require('react-masonry-component');
@@ -7,7 +8,7 @@ var Masonry = require('react-masonry-component');
 const FeaturedLists = () => (
   <div className="mase-cont">
 
-  	<div className="filter-nav body-max">
+  	<div className="filter-nav body-max filter-desktop">
   		<a href="#">Found</a>
   		<a href="#">Books</a>
   		<a href="#">Electronics</a>
@@ -16,6 +17,12 @@ const FeaturedLists = () => (
   		<a href="#">Apps</a>
   		<a href="#">Design</a>
   	</div>
+
+    <div className="filter-nav body-max filter-mobile">
+      mobile dropdown goes here
+    </div>
+
+
 
     <Masonry
     className={'card-grid'} // default ''

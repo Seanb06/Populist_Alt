@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="22px" height="19px" viewBox="0 0 22 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>favorite-heart-button</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Landing" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Custom-Preset" fill="#457BD9">
+            <g id="favorite-heart-button">
+                <path d="M10.7803993,18.9987333 L9.26979583,17.5838667 C3.6639882,12.9225333 0,9.77993333 0,5.92546667 C0,2.7892 2.58999093,0.354666667 5.9265245,0.354666667 C7.76458258,0.354666667 9.5959029,1.1666 10.7803993,2.48266667 C11.9648956,1.1666 13.796216,0.354666667 15.634274,0.354666667 C18.9708076,0.354666667 21.5607985,2.7892 21.5607985,5.92546667 C21.5607985,9.77993333 17.8968103,12.9225333 12.2910027,17.5838667 L10.7803993,18.9987333 Z" id="Fill-1"></path>
+            </g>
+        </g>
+    </g>
+</svg>
