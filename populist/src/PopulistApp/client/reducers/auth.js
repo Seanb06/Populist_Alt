@@ -7,6 +7,8 @@ export const initialState = {
 };
 
 export default function(state = initialState, action) {
+
+  console.log("auth reducer", action);
   const {data, type} = action;
 
   switch (type) {
