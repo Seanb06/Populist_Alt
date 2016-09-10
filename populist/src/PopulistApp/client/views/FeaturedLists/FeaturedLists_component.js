@@ -42,119 +42,103 @@ const FeaturedLists = () => (
      	</ul>
 
      
-     
-     
-     
-     
-     
-     
-
-
-
-
-
+    
      </div>
 
       <div>
-        <Card className="home-card">
-          <CardMedia>
-            <img src="http://lorempixel.com/600/337/nature/" />
-          </CardMedia>
-          <CardTitle className="card-title" title='test' />
-          <CardActions>
-            one
-            <FlatButton
-              containerElement={<Link to='/list/one' />}
-              linkButton={true}
-              label='one'/>
-            }
-          </CardActions>
-        </Card>
+        <a href="/list/one" className="card-lnk">
+          <Card className="home-card">
+            <CardMedia>
+              <img src="http://lorempixel.com/600/337/nature/" />
+            </CardMedia>
+            <CardTitle className="card-title" title='The 20 Best Barbershops on Brooklyn' />
+            <CardActions>
+              
+            </CardActions>
+          </Card>
+          <div className="card-love">
+          1156</div>
+        </a>
       </div>
 
       <div>
-        <Card className="home-card">
-          <CardMedia>
-            <img src="http://lorempixel.com/600/337/nature/" />
-          </CardMedia>
-          <CardTitle className="card-title" title='test' />
-          <CardActions>
-            one
-            <FlatButton
-              containerElement={<Link to='/list/one' />}
-              linkButton={true}
-              label='one'/>
-            }
-          </CardActions>
-        </Card>
+        <a href="/list/one" className="card-lnk">
+          <Card className="home-card">
+            <CardMedia>
+              <img src="http://lorempixel.com/600/337/nature/" />
+            </CardMedia>
+            <CardTitle className="card-title" title='Testing out a very long text string to see what happens to the spacing of the module' />
+            <CardActions>
+              
+            </CardActions>
+          </Card>
+          <div className="card-love">
+          1156</div>
+        </a>
       </div>
 
       <div>
-        <Card className="home-card">
-          <CardMedia>
-            <img src="http://lorempixel.com/600/337/nature/" />
-          </CardMedia>
-          <CardTitle className="card-title" title='test' />
-          <CardActions>
-            one
-            <FlatButton
-              containerElement={<Link to='/list/one' />}
-              linkButton={true}
-              label='one'/>
-            }
-          </CardActions>
-        </Card>
+        <a href="/list/one" className="card-lnk">
+          <Card className="home-card">
+            <CardMedia>
+              <img src="http://lorempixel.com/600/337/nature/" />
+            </CardMedia>
+            <CardTitle className="card-title" title='Testing out a very long text string to see what happens to the spacing of the module' />
+            <CardActions>
+              
+            </CardActions>
+          </Card>
+          <div className="card-love">
+          1156</div>
+        </a>
       </div>
 
       <div>
-        <Card className="home-card">
-          <CardMedia>
-            <img src="http://lorempixel.com/600/337/nature/" />
-          </CardMedia>
-          <CardTitle className="card-title" title='test' />
-          <CardActions>
-            one
-            <FlatButton
-              containerElement={<Link to='/list/one' />}
-              linkButton={true}
-              label='one'/>
-            }
-          </CardActions>
-        </Card>
+        <a href="/list/one" className="card-lnk">
+          <Card className="home-card">
+            <CardMedia>
+              <img src="http://lorempixel.com/600/337/nature/" />
+            </CardMedia>
+            <CardTitle className="card-title" title='Testing out a very long text string to see what happens to the spacing of the module' />
+            <CardActions>
+              
+            </CardActions>
+          </Card>
+          <div className="card-love">
+          1156</div>
+        </a>
       </div>
 
       <div>
-        <Card className="home-card">
-          <CardMedia>
-            <img src="http://lorempixel.com/600/337/nature/" />
-          </CardMedia>
-          <CardTitle className="card-title" title='test' />
-          <CardActions>
-            one
-            <FlatButton
-              containerElement={<Link to='/list/one' />}
-              linkButton={true}
-              label='one'/>
-            }
-          </CardActions>
-        </Card>
+        <a href="/list/one" className="card-lnk">
+          <Card className="home-card">
+            <CardMedia>
+              <img src="http://lorempixel.com/600/337/nature/" />
+            </CardMedia>
+            <CardTitle className="card-title" title='Testing out a very long text string to see what happens to the spacing of the module' />
+            <CardActions>
+              
+            </CardActions>
+          </Card>
+          <div className="card-love">
+          1156</div>
+        </a>
       </div>
 
       <div>
-        <Card className="home-card">
-          <CardMedia>
-            <img src="http://lorempixel.com/600/337/nature/" />
-          </CardMedia>
-          <CardTitle className="card-title" title='test' />
-          <CardActions>
-            one
-            <FlatButton
-              containerElement={<Link to='/list/one' />}
-              linkButton={true}
-              label='one'/>
-            }
-          </CardActions>
-        </Card>
+        <a href="/list/one" className="card-lnk">
+          <Card className="home-card">
+            <CardMedia>
+              <img src="http://lorempixel.com/600/337/nature/" />
+            </CardMedia>
+            <CardTitle className="card-title" title='Testing out a very long text string to see what happens to the spacing of the module' />
+            <CardActions>
+              
+            </CardActions>
+          </Card>
+          <div className="card-love">
+          1156</div>
+        </a>
       </div>
 
   </Masonry>

@@ -6,6 +6,8 @@ import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import { Link } from 'react-router';
 import FeaturedLists from '../FeaturedLists/FeaturedLists_container'
+import CategoryBlocks from '../CategoryBlocks/CategoryBlocks_container'
+
 var Masonry = require('react-masonry-component');
 
 var masonryOptions = {
@@ -43,6 +45,10 @@ const Home = ({lists}) => (
   */}
   <Header /> 
   <FeaturedLists />
+
+  <CategoryBlocks />
+
+
   <h3 className="sec-head body-max">Our Most Popular Populists</h3>
   <div className="mase-cont">
   <Masonry
@@ -53,21 +59,25 @@ const Home = ({lists}) => (
   >
     {lists.map(({_id, title}) => (
       <div key={_id}>
-        <Card className="home-card">
-          <CardMedia>
-            <img src="http://lorempixel.com/600/337/nature/" />
-          </CardMedia>
-          <CardTitle className="card-title" title={title} />
-          <CardActions>
-            {_id}
-            <FlatButton
-              containerElement={<Link to={'/list/'+_id } />}
-              linkButton={true}
-              label={_id}/>
+        <a href={'/list/'+_id } className="card-lnk">
+          <Card className="home-card">
+            <CardMedia>
+              <img src="http://lorempixel.com/600/337/nature/" />
+            </CardMedia>
+            <CardTitle className="card-title" title={title} />
+            <CardActions>
+              {_id}
+              <FlatButton
+                containerElement={<Link to={'/list/'+_id } />}
+                linkButton={true}
+                label={_id}/>
 
-            }
-          </CardActions>
-        </Card>
+              }
+            </CardActions>
+          </Card>
+          <div className="card-love">
+          1156</div>
+        </a>
       </div>
     ))}
   </Masonry>

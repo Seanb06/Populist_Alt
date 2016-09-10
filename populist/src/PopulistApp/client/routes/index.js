@@ -59,6 +59,7 @@ export default function createRoutes(store) {
         <Route path="/list/:listId" component={ListDetail} />
         <Route path="/create" component={ListCreate} onEnter={requireAuth} />
         <Route path="/profile" component={Profile} onEnter={requireAuth} />
+        
       </Route>
 
       
