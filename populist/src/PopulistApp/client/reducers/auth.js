@@ -2,14 +2,18 @@ import {USER_LOGGING_IN, USER_DATA, SHOW_NEED_LOGIN_MSG} from '../actions/auth';
 
 export const initialState = {
   user: null,
-  loggingIn: false,
-  needLoginMsg: false
+  loggingIn: false
 };
+
+console.log("auth initialState", initialState);
 
 export default function(state = initialState, action) {
 
-  console.log("auth reducer", action);
+  
   const {data, type} = action;
+
+
+  console.log("auth reducer", data, type, state);
 
   switch (type) {
     case USER_DATA:
@@ -21,12 +25,6 @@ export default function(state = initialState, action) {
       return Object.assign({}, state, {
         loggingIn: data,
       });
-
-    case SHOW_NEED_LOGIN_MSG:
-      return Object.assign({}, state, {
-        needLoginMsg: true,
-      });
-
 
     default:
       return state;

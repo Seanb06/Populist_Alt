@@ -1,11 +1,5 @@
 import { USER_LOGGING_IN, USER_DATA, SHOW_NEED_LOGIN_MSG } from '../constants'
 
-export function showNeedLoginMsg() {
-  return {
-    type: SHOW_NEED_LOGIN_MSG,
-  }
-}
-
 export function loginWithFacebook() {
   return dispatch => {
     Meteor.loginWithFacebook(err => {
@@ -22,6 +16,7 @@ export function loginWithGoogle() {
     Meteor.loginWithGoogle(err => {
       if (err) {
         alert('Error while login with google');
+        dispatch(loginError(err.message))
       }
     });
   };

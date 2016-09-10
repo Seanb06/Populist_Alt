@@ -10,22 +10,19 @@ import ListDetail from '../views/ListDetail/ListDetail_container'
 import ListCreate from '../views/ListCreate/ListCreate_container'
 import Login from '../views/Login/Login_container'
 import Profile from '../views/Profile/Profile_container'
-
 import { showNeedLoginMsg } from '../actions/auth'
-
-
 import { push } from 'react-router-redux'
 // push('/login')
 
 export default function createRoutes(store) {
 
-  function logoutOnEnterHook(nextState, replaceState) {
+  function logoutOnEnterHook(nextState, replace) {
     if (store.getState().auth.user) {
       // logout the user, and redirect to '/' while success
       store.dispatch(logoutAndRedirectHome())
     } else {
       // the user hasn't login yet
-      
+
       // this is not working here
       store.dispatch(push("/login"));
     }
@@ -33,11 +30,10 @@ export default function createRoutes(store) {
 
   function requireAuth(nextState, replace) {
 
-    console.log("this route will requireAuth", store.getState().auth);
-    if (!store.getState().auth.user) {
-      store.dispatch(showNeedLoginMsg())
-      replace('/login')
-    }
+    console.log("this route will requireAuth", store.getState());
+    {/*if (!store.getState().auth.user) {
+      replace('/login')*/}
+    
   }
 
 

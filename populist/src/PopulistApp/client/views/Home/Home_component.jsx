@@ -14,7 +14,6 @@ var masonryOptions = {
     transitionDuration: 0
 };
 
-
 const Home = ({lists}) => (
 
   <div>

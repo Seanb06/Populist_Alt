@@ -78,7 +78,7 @@ const ListCreate = () => (
   		<div className="create-stack create-location">
   			<h4 className="mini-head">Location</h4>
   			<div className="form-holder">
-  				<TextField placeholder="Optional" className="" />
+  				<TextField placeholder="Optional" className="" hintText="Optional" />
   				<a href="#">EDIT</a>
   			</div>
   		</div>
