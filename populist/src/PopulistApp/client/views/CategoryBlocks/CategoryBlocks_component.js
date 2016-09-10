@@ -16,72 +16,64 @@ const CategoryBlocks = () => (
 
 
       <div>
-        <Card className="home-card">
-          <CardMedia>
-            <img src="http://lorempixel.com/600/337/nature/" />
-          </CardMedia>
-          <CardTitle className="card-title" title='test' />
-          <CardActions>
-            one
-            <FlatButton
-              containerElement={<Link to='/list/one' />}
-              linkButton={true}
-              label='one'/>
-            }
-          </CardActions>
-        </Card>
+        <a href="/list/one" className="card-lnk">
+          <Card className="home-card cat-block">
+            <CardMedia>
+              <img src="/assets/images/block-book.svg" />
+            </CardMedia>
+            <CardTitle className="card-title" title='Pizza' />
+            <CardActions>
+              
+            </CardActions>
+          </Card>
+        </a>
       </div>
 
       <div>
-        <Card className="home-card">
-          <CardMedia>
-            <img src="http://lorempixel.com/600/337/nature/" />
-          </CardMedia>
-          <CardTitle className="card-title" title='test' />
-          <CardActions>
-            one
-            <FlatButton
-              containerElement={<Link to='/list/one' />}
-              linkButton={true}
-              label='one'/>
-            }
-          </CardActions>
-        </Card>
+        <a href="/list/one" className="card-lnk">
+          <Card className="home-card cat-block">
+            <CardMedia>
+              <img src="/assets/images/block-book.svg" />
+            </CardMedia>
+            <CardTitle className="card-title" title='Pizza' />
+            <CardActions>
+              
+            </CardActions>
+          </Card>
+        </a>
       </div>
 
       <div>
-        <Card className="home-card">
-          <CardMedia>
-            <img src="http://lorempixel.com/600/337/nature/" />
-          </CardMedia>
-          <CardTitle className="card-title" title='test' />
-          <CardActions>
-            one
-            <FlatButton
-              containerElement={<Link to='/list/one' />}
-              linkButton={true}
-              label='one'/>
-            }
-          </CardActions>
-        </Card>
+        <a href="/list/one" className="card-lnk">
+          <Card className="home-card cat-block">
+            <CardMedia>
+              <img src="/assets/images/block-book.svg" />
+            </CardMedia>
+            <CardTitle className="card-title" title='Pizza' />
+            <CardActions>
+              
+            </CardActions>
+          </Card>
+        </a>
       </div>
 
       <div>
-        <Card className="home-card">
-          <CardMedia>
-            <img src="http://lorempixel.com/600/337/nature/" />
-          </CardMedia>
-          <CardTitle className="card-title" title='test' />
-          <CardActions>
-            one
-            <FlatButton
-              containerElement={<Link to='/list/one' />}
-              linkButton={true}
-              label='one'/>
-            }
-          </CardActions>
-        </Card>
+        <a href="/list/one" className="card-lnk">
+          <Card className="home-card cat-block">
+            <CardMedia>
+              <img src="/assets/images/block-book.svg" />
+            </CardMedia>
+            <CardTitle className="card-title" title='Pizza' />
+            <CardActions>
+              
+            </CardActions>
+          </Card>
+        </a>
       </div>
+
+
+
+
 
 
 
