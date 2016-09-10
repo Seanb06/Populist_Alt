@@ -58,7 +58,7 @@ const CategoryBlocks = () => (
       </div>
 
       <div>
-        <a href="/list/one" className="card-lnk">
+        <a href="/list/one" className="card-lnk last-card-lnk">
           <Card className="home-card cat-block">
             <CardMedia>
               <img src="/assets/images/block-book.svg" />
