@@ -86,18 +86,18 @@ const ListCreate = () => (
   		<div className="create-stack create-item">
   			<h4 className="mini-head">List Items</h4>
   			<div className="form-holder">
-  				<TextField  className="" placeholder="Enter text or Paste in a web address" />
+  				<TextField  className="" placeholder="Enter text or Paste in a web address" hintText="Enter text or Paste in a web address"  />
   				<div className="num">01</div>
   				<a href="#" className="subtract">-</a>
   			</div>
   			<div className="form-holder">
-  				<TextField  className="" placeholder="Enter text or Paste in a web address" />
+  				<TextField  className="" placeholder="Enter text or Paste in a web address"  hintText="Enter text or Paste in a web address" />
   				<div className="num">1</div>
   				<a href="#" className="subtract">-</a>
 
   			</div>
   			<div className="form-holder">
-  				<TextField  className="" placeholder="Enter text or Paste in a web address" />
+  				<TextField  className="" placeholder="Enter text or Paste in a web address" hintText="Enter text or Paste in a web address" />
   				<div className="num">88</div>
   				<a href="#" className="subtract">-</a>
 

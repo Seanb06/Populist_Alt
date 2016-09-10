@@ -33,7 +33,7 @@ const MainNav = ({category, filter}) => (
         <MenuItem value={7} primaryText="Category" />
       </DropDownMenu>
       <div className="nav-srch"> 
-        <TextField placeholder="Search the best" />
+        <TextField placeholder="Search the best"  hintText="Search the best" />
         <button>Search</button>
       </div>
     </ToolbarGroup>
