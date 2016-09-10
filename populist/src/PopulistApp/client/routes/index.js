@@ -33,10 +33,10 @@ export default function createRoutes(store) {
 
   function requireAuth(nextState, replaceState) {
 
-    console.log("this route will requireAuth");
+    console.log("this route will requireAuth", store.getState().auth);
     if (!store.getState().auth.user) {
       store.dispatch(showNeedLoginMsg())
-      //replaceState({ nextPathname: nextState.location.pathname }, '/login')
+      replaceState({ nextPathname: nextState.location.pathname }, '/login')
     }
   }
 
