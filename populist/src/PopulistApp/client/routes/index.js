@@ -25,18 +25,18 @@ export default function createRoutes(store) {
       store.dispatch(logoutAndRedirectHome())
     } else {
       // the user hasn't login yet
-
+      
       // this is not working here
       store.dispatch(push("/login"));
     }
   }
 
-  function requireAuth(nextState, replaceState) {
+  function requireAuth(nextState, replace) {
 
     console.log("this route will requireAuth", store.getState().auth);
     if (!store.getState().auth.user) {
       store.dispatch(showNeedLoginMsg())
-      replaceState({ nextPathname: nextState.location.pathname }, '/login')
+      replace('/login')
     }
   }
 
