@@ -44,9 +44,9 @@ const MainNav = ({category, filter}) => (
       <RaisedButton
         className="nav-btn nav-create-btn"
         primary={true}
-        containerElement={<Link to='/profile' />}
+        containerElement={<Link to='/create' />}
         linkButton={true}
-        label="Create a profile"
+        label="Create a list"
         style={navBtnStyle}
          />
       <RaisedButton

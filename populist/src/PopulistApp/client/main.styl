@@ -37,6 +37,7 @@ body
 
 a 
 	color #0C5BFF
+	text-decoration none
 
 .body-max
 	max-width 1320px
@@ -123,6 +124,13 @@ a
 	padding 5px 0px !important
 	font-weight bold
 	font-size 12px !important
+	span 
+		line-height: 1.1em !important
+		font-size: 22px !important
+		display: block 
+		padding-right: 10px
+	a
+		text-decoration: none !important
 
 .card-grid 
 	max-width 1320px
@@ -130,6 +138,25 @@ a
 	/*outline 1px dotted green*/
 	> div 
 		margin 15px
+
+
+
+
+
+.card-lnk
+	position: relative
+	display: block
+
+
+.card-love 
+	position: absolute
+	bottom 10px
+	left: 15px
+	z-index: 5
+	color black
+	font-family: Roboto
+	padding-left: 30px
+	background: transparent url('/assets/images/favorite-heart-button2.svg') no-repeat left center
 
 
 @media (min-width:675px)
@@ -671,11 +698,18 @@ textarea
 
 	.nav-create-btn
   	width: 215px !important
-  	background: #457BD9 !important
+  	a
+  		background-color: red !important
+
 
   .nav-sign-btn
   	width: 110px !important
   	background: #9B9B9B !important
+
+
+
+
+
 
 
 
