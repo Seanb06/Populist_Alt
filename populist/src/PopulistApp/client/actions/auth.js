@@ -1,12 +1,28 @@
-import { USER_LOGGING_IN, USER_DATA, SHOW_NEED_LOGIN_MSG } from '../constants'
+//import { USER_AUTHENTICATING, USER_DATA } from '../constants'
+import actionTypeBuilder from './actionTypeBuilder';
+export const USER_AUTHENTICATING = actionTypeBuilder.type('USER_AUTHENTICATING');
+export const USER_DATA = actionTypeBuilder.type('USER_DATA');
+
+
+export function handleSignedIn(dispatch, token) {
+  const user = Meteor.user();
+
+  if (user) {
+
+    console.log("we have a user", user, USER_DATA);
+    dispatch(USER_DATA);
+  }
+}
+
 
 export function loginWithFacebook() {
   return dispatch => {
     Meteor.loginWithFacebook(err => {
       if (err) {
-        alert('Error while login with facebook: ' + err.message)
-        dispatch(loginError(err.message))
+        //alert('Error while login with facebook: ' + err.message)
+        return dispatch(loginError(err.message))
       }
+      handleSignedIn(dispatch)
     })
   }
 }
@@ -15,30 +31,37 @@ export function loginWithGoogle() {
   return () => {
     Meteor.loginWithGoogle(err => {
       if (err) {
-        alert('Error while login with google');
-        dispatch(loginError(err.message))
+        //alert('Error while login with google');
+        return dispatch(loginError(err.message))
       }
+      handleSignedIn(dispatch)
     });
   };
 }
 
 export function loadUser() {
+
+  console.log("loadUser", USER_AUTHENTICATING)
   return dispatch => {
-    Tracker.autorun(() => {
-      dispatch({
-        type: USER_LOGGING_IN,
-        data: Meteor.loggingIn(),
-      });
+    dispatch({
+      type: USER_AUTHENTICATING,
+      meteor: {
+        get: () => Meteor.loggingIn(),
+      },
     });
 
-    Tracker.autorun(() => {
-      dispatch({
-        type: USER_DATA,
-        data: Meteor.user(),
-      });
+    dispatch({
+      type: USER_DATA,
+      meteor: {
+      subscribe: {
+        name: 'userData',
+        get: () => Meteor.users.findOne(Meteor.userId())
+        }
+      },
     });
   };
 }
+
 
 export function logout() {
   return () => {

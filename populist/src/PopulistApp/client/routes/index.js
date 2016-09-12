@@ -10,8 +10,8 @@ import ListDetail from '../views/ListDetail/ListDetail_container'
 import ListCreate from '../views/ListCreate/ListCreate_container'
 import Login from '../views/Login/Login_container'
 import Profile from '../views/Profile/Profile_container'
-import { showNeedLoginMsg } from '../actions/auth'
-import { push } from 'react-router-redux'
+import { push, routerActions } from 'react-router-redux'
+import { UserAuthWrapper } from 'redux-auth-wrapper'
 // push('/login')
 
 export default function createRoutes(store) {
@@ -22,20 +22,23 @@ export default function createRoutes(store) {
       store.dispatch(logoutAndRedirectHome())
     } else {
       // the user hasn't login yet
-
       // this is not working here
       store.dispatch(push("/login"));
     }
   }
 
-  function requireAuth(nextState, replace) {
+  // function requireAuth(nextState, replace) {
+  //   console.log("this route will requireAuth", store.getState());
+  //   {/*if (!store.getState().auth.user) {
+  //     replace('/login')*/}
+  // }
 
-    console.log("this route will requireAuth", store.getState());
-    {/*if (!store.getState().auth.user) {
-      replace('/login')*/}
-    
-  }
-
+  const UserIsAuthenticated = UserAuthWrapper({
+    authSelector: state => state.auth.user, // how to get the user state
+    authenticatingSelector: state => state.auth.isAuthenticating,
+    redirectAction: routerActions.replace, // the redux action to dispatch for redirect
+    wrapperDisplayName: 'UserIsAuthenticated' // a nice name for this auth check
+  })
 
   return (
     <Route path="/" component={App}>
@@ -53,12 +56,10 @@ export default function createRoutes(store) {
       <Route component={MainLayout}>
         <IndexRoute component={Home} />
         <Route path="/list/:listId" component={ListDetail} />
-        <Route path="/create" component={ListCreate} onEnter={requireAuth} />
-        <Route path="/profile" component={Profile} onEnter={requireAuth} />
+        <Route path="/create" component={UserIsAuthenticated(ListCreate)} />
+        <Route path="/profile" component={UserIsAuthenticated(Profile)} />
         
       </Route>
-
-      
     </Route>
   )
 }

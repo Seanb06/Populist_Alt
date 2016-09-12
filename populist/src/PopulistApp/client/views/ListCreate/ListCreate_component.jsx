@@ -15,12 +15,8 @@ const styles = {
   },
   hint: {	
     left: 50	
-  },
-
-  
+  },  
 };
-
-
 
 const ListCreate = () => (
   <div>

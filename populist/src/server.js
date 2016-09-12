@@ -4,6 +4,8 @@ import Lists from 'PopulistApp/collections/Lists';
 
 
 Meteor.startup(function(){
+
+  console.log("HELLO")
   Lists.remove({});
   Lists.insert({
     _id: 'one', title: 'Populist list 1', content: 'Yeah! Lists lists lists!'

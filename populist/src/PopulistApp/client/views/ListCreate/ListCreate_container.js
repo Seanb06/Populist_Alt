@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 
 
 const mapStateToProps = state => ({
-  
+  ...state
 });
 
 const onPropsChange = (props, onData) => {
@@ -16,4 +16,4 @@ const onPropsChange = (props, onData) => {
 };
 
 
-export default ListCreate; //connect(mapStateToProps)(composeWithTracker(onPropsChange)(ListCreate));
+export default connect(mapStateToProps)(ListCreate);

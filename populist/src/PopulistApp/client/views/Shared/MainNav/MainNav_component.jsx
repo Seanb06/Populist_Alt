@@ -45,7 +45,6 @@ const MainNav = ({category, filter}) => (
         className="nav-btn nav-create-btn"
         primary={true}
         containerElement={<Link to='/create' />}
-        linkButton={true}
         label="Create a list"
         style={navBtnStyle}
          />
@@ -53,7 +52,6 @@ const MainNav = ({category, filter}) => (
         className="nav-btn nav-sign-btn"
         secondary={true}
         containerElement={<Link to='/login' />}
-        linkButton={true}
         label="Sign in"
         style={navBtnStyle}
          />

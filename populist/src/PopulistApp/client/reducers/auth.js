@@ -1,29 +1,33 @@
-import {USER_LOGGING_IN, USER_DATA, SHOW_NEED_LOGIN_MSG} from '../actions/auth';
+import actionTypeBuilder from '../actions/actionTypeBuilder';
+import { USER_AUTHENTICATING, USER_DATA } from '../actions/auth';
 
 export const initialState = {
   user: null,
-  loggingIn: false
+  isAuthenticated: false,
+  isAuthenticating: false,
+  statusText: null
 };
-
-console.log("auth initialState", initialState);
 
 export default function(state = initialState, action) {
 
-  
   const {data, type} = action;
 
-
-  console.log("auth reducer", data, type, state);
+  console.log ("AUTH REDUCER type, action ", type, action)
 
   switch (type) {
-    case USER_DATA:
+
+    case actionTypeBuilder.changed(USER_DATA):
       return Object.assign({}, state, {
         user: data,
+        isAuthenticating: false,
+        isAuthenticated: true,
+
       });
 
-    case USER_LOGGING_IN:
+    case actionTypeBuilder.changed(USER_AUTHENTICATING):
       return Object.assign({}, state, {
-        loggingIn: data,
+        isAuthenticating: data,
+        isAuthenticated: false,
       });
 
     default:
