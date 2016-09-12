@@ -12,9 +12,11 @@ import Login from '../views/Login/Login_container'
 import Profile from '../views/Profile/Profile_container'
 import { push, routerActions } from 'react-router-redux'
 import { UserAuthWrapper } from 'redux-auth-wrapper'
-// push('/login')
+
 
 export default function createRoutes(store) {
+
+  const connect = (fn) => (nextState, replaceState) => fn(store, nextState, replaceState);
 
   function logoutOnEnterHook(nextState, replace) {
     if (store.getState().auth.user) {
@@ -26,12 +28,6 @@ export default function createRoutes(store) {
       store.dispatch(push("/login"));
     }
   }
-
-  // function requireAuth(nextState, replace) {
-  //   console.log("this route will requireAuth", store.getState());
-  //   {/*if (!store.getState().auth.user) {
-  //     replace('/login')*/}
-  // }
 
   const UserIsAuthenticated = UserAuthWrapper({
     authSelector: state => state.auth.user, // how to get the user state
@@ -56,8 +52,8 @@ export default function createRoutes(store) {
       <Route component={MainLayout}>
         <IndexRoute component={Home} />
         <Route path="/list/:listId" component={ListDetail} />
-        <Route path="/create" component={UserIsAuthenticated(ListCreate)} />
-        <Route path="/profile" component={UserIsAuthenticated(Profile)} />
+        <Route path="/create" component={UserIsAuthenticated(ListCreate)} onEnter={connect(UserIsAuthenticated.onEnter)} />
+        <Route path="/profile" component={UserIsAuthenticated(Profile)} onEnter={connect(UserIsAuthenticated.onEnter)} />
         
       </Route>
     </Route>

@@ -6,6 +6,8 @@ Meteor.comps = comps;
 
 export default store => next => action => {
   if (!action.meteor || (!action.meteor.get && !action.meteor.unsubscribe)) {
+
+    console.log("return next action", action)
     return next(action);
   }
 
@@ -31,8 +33,10 @@ export default store => next => action => {
     }
 
     if (!unsubscribe) {
+
       comps[action.type] = Tracker.autorun(() => {
         const data = get();
+        console.log("it is not unsubscribe", actionTypeBuilder.changed(action.type), data)
         next({ type: actionTypeBuilder.changed(action.type), data });
         return resolve();
       });

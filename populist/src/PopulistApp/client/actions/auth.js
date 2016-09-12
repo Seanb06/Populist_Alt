@@ -2,15 +2,34 @@
 import actionTypeBuilder from './actionTypeBuilder';
 export const USER_AUTHENTICATING = actionTypeBuilder.type('USER_AUTHENTICATING');
 export const USER_DATA = actionTypeBuilder.type('USER_DATA');
+import { push } from 'react-router-redux'
 
+export function loadUser() {
+  console.log("loadUser called");
+  return dispatch => {
+    dispatch({
+      type: USER_AUTHENTICATING,
+      meteor: {
+        get: () => Meteor.loggingIn(),
+      },
+    });
+
+    dispatch({
+      type: USER_DATA,
+      meteor: {
+      subscribe: {
+        name: 'userData',
+        get: () => Meteor.users.findOne(Meteor.userId())
+        }
+      },
+    });
+  };
+}
 
 export function handleSignedIn(dispatch, token) {
   const user = Meteor.user();
-
   if (user) {
-
     console.log("we have a user", user, USER_DATA);
-    dispatch(USER_DATA);
   }
 }
 
@@ -38,30 +57,6 @@ export function loginWithGoogle() {
     });
   };
 }
-
-export function loadUser() {
-
-  console.log("loadUser", USER_AUTHENTICATING)
-  return dispatch => {
-    dispatch({
-      type: USER_AUTHENTICATING,
-      meteor: {
-        get: () => Meteor.loggingIn(),
-      },
-    });
-
-    dispatch({
-      type: USER_DATA,
-      meteor: {
-      subscribe: {
-        name: 'userData',
-        get: () => Meteor.users.findOne(Meteor.userId())
-        }
-      },
-    });
-  };
-}
-
 
 export function logout() {
   return () => {

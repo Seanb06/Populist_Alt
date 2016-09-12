@@ -22,7 +22,6 @@ import { meteorInsert, meteorUpdate, meteorRemove } from './middlewares/meteorCr
 
 import { ReactRouterSSR } from 'meteor/reactrouter:react-router-ssr';
 
-
 import {loadUser} from './actions/auth';
 
 import injectTapEventPlugin from 'react-tap-event-plugin';
@@ -56,12 +55,13 @@ const DevTools = createDevTools(
 let store = createStore(
   reducer,
   DevTools.instrument(),
-  compose(middleware)
+  middleware
+  //compose(middleware)
 )
+
+store.dispatch(loadUser())
 let history = syncHistoryWithStore(browserHistory, store)
 let initialState;
-
-
 //server-sde rendering
 // Use history hook to get a reference to the history object
 const historyHook = newHistory => history = newHistory;
@@ -73,31 +73,14 @@ const routes = createRoutes(store)
 
 // Create a redux store and pass into the redux Provider wrapper
 const wrapperHook = app => {
-  console.log(app)
   return <Provider store={store}>{app}</Provider>;
 }
 
 const clientOptions = { historyHook, rehydrateHook, wrapperHook, ReactDOM };
 const serverOptions = { historyHook, dehydrateHook };
-
-
 //console.log("routes", routes);
 
-// let render = (key = null) => {
-//   const routes = createRoutes(store) 
-//   const AppContainer = (
-//     <Provider store={store}>
-//       <div>
-//         <Router history={history} routes={routes} key={key} />
-//         <DevTools />
-//       </div>
-//     </Provider>
-//   )
-//   ReactDOM.render(AppContainer, document.getElementById('mount'))
-// }
 
 Meteor.startup(function(){
-  //render()
   ReactRouterSSR.Run(routes, clientOptions, serverOptions);
-  
 });

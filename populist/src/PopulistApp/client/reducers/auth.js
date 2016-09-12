@@ -12,7 +12,8 @@ export default function(state = initialState, action) {
 
   const {data, type} = action;
 
-  console.log ("AUTH REDUCER type, action ", type, action)
+  console.log ("AUTH REDUCER type::: ", type)
+  console.log ("AUTH REDUCER action::: ", action)
 
   switch (type) {
 
