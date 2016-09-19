@@ -55,8 +55,8 @@ const DevTools = createDevTools(
 let store = createStore(
   reducer,
   DevTools.instrument(),
-  middleware
-  //compose(middleware)
+  //middleware
+  compose(middleware)
 )
 
 store.dispatch(loadUser())

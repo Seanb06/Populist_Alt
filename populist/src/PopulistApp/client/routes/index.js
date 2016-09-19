@@ -29,11 +29,19 @@ export default function createRoutes(store) {
     }
   }
 
-  const UserIsAuthenticated = UserAuthWrapper({
-    authSelector: state => state.auth.user, // how to get the user state
-    authenticatingSelector: state => state.auth.isAuthenticating,
-    redirectAction: routerActions.replace, // the redux action to dispatch for redirect
-    wrapperDisplayName: 'UserIsAuthenticated' // a nice name for this auth check
+  // const UserIsAuthenticated = UserAuthWrapper({
+  //   authSelector: state => state.auth.user, // how to get the user state
+  //   authenticatingSelector: state => state.auth.isAuthenticating,
+  //   redirectAction: routerActions.replace, // the redux action to dispatch for redirect
+  //   wrapperDisplayName: 'UserIsAuthenticated' // a nice name for this auth check
+  // })
+
+
+  const requireAuthentication = UserAuthWrapper({
+    authSelector: state => state.auth,
+    predicate: auth => auth.isAuthenticated,
+    redirectAction: push,
+    wrapperDisplayName: 'UserIsJWTAuthenticated'
   })
 
   return (
@@ -52,8 +60,8 @@ export default function createRoutes(store) {
       <Route component={MainLayout}>
         <IndexRoute component={Home} />
         <Route path="/list/:listId" component={ListDetail} />
-        <Route path="/create" component={UserIsAuthenticated(ListCreate)} onEnter={connect(UserIsAuthenticated.onEnter)} />
-        <Route path="/profile" component={UserIsAuthenticated(Profile)} onEnter={connect(UserIsAuthenticated.onEnter)} />
+        <Route path="/create" component={requireAuthentication(ListCreate)} onEnter={connect(requireAuthentication.onEnter)} />
+        <Route path="/profile" component={requireAuthentication(Profile)} onEnter={connect(requireAuthentication.onEnter)} />
         
       </Route>
     </Route>

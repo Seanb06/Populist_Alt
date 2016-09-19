@@ -18,6 +18,13 @@ export default function(state = initialState, action) {
   switch (type) {
 
     case actionTypeBuilder.changed(USER_DATA):
+
+      console.log( "what the fuck", Object.assign({}, state, {
+        user: data,
+        isAuthenticating: false,
+        isAuthenticated: true,
+
+      }))
       return Object.assign({}, state, {
         user: data,
         isAuthenticating: false,

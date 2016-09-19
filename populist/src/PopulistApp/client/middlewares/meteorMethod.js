@@ -5,10 +5,18 @@ export default store => next => action => {
     return next(action);
   }
 
+
+
   const { method, params } = action.meteor.call;
   const parameters = params || [];
 
+
+
+
   const meteorMethod = typeof method === 'string' ? Meteor.call : method;
+
+
+  console.log(meteorMethod);
 
   if (typeof method === 'string') {
     parameters.unshift(method);
@@ -19,11 +27,13 @@ export default store => next => action => {
     next({ type: actionTypeBuilder.loading(action.type) });
 
     meteorMethod(...parameters, (error, result) => {
-      if (error) {
+
+      console.log ("CALLING THIS SHIT", error, result);
+      
+      if (error) { 
         next({ type: actionTypeBuilder.error(action.type), error });
         return reject(error);
       }
-
       next({ type: actionTypeBuilder.success(action.type) });
       return resolve(result);
     });

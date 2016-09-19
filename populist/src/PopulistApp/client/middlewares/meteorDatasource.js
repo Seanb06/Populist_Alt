@@ -36,7 +36,6 @@ export default store => next => action => {
 
       comps[action.type] = Tracker.autorun(() => {
         const data = get();
-        console.log("it is not unsubscribe", actionTypeBuilder.changed(action.type), data)
         next({ type: actionTypeBuilder.changed(action.type), data });
         return resolve();
       });

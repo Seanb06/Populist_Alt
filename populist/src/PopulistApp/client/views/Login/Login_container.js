@@ -4,17 +4,20 @@ import {loginWithGoogle} from '../../actions/auth'
 import {loginWithFacebook} from '../../actions/auth'
 import Login from './Login_component';
 
-
 const mapStateToProps = state => ({
   user: state.auth.user,
 })
 
 const mapDispatchToProps = dispatch => (
-  bindActionCreators({loginWithGoogle, loginWithFacebook}, dispatch)
+  bindActionCreators({
+    loginWithGoogle,
+    loginWithFacebook
+  }, dispatch)
 )
 
-// const componentWillMount = () => ({
-// });
+// const componentWillMount = () => (
+//   console.log('props', this.props);
+// );
 
 // const componentDidMount = () => ({
 // });
