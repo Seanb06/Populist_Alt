@@ -27,8 +27,8 @@ let ListDetail = ({listDetail, listId, listItems}) => (
       <div className="list-head">
         <div className="num-head">The Best...</div>
         <h2>{listDetail.title}</h2>
-        <div className="list-descr">I've tried a ton of bagels in the city but these are the ones that I will wake up early to get. Lorum ipsum ipsum lorem to the blank.
-          <author>By Kate Miller</author>
+        <div className="list-descr">{listDetail.subtitle}
+          <author>By {listDetail.byline}</author>
         </div>
         <div className="list-head-social">
           <a href="#" className="social-icon facebook-icon">
