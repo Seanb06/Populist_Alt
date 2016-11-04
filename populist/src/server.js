@@ -74,6 +74,62 @@ Meteor.startup(function(){
     content: 'Something new soon.'}
   );
 
+  ListItem.insert({
+   list: 'two',
+   title: 'ESCAPE CLAUSE',
+   image: 'http://populist-images.s3.amazonaws.com/EscapeClause.jpg',
+   content: 'Virgil Flowers of the Minnesota Bureau of Criminal Apprehension must deal with the theft of tigers from the local zoo.'
+  })
+
+  ListItem.insert({
+   list: 'two',
+   title: 'TWO BY TWO',
+   image: 'http://populist-images.s3.amazonaws.com/EscapeClause.jpg',
+   content: 'A man who became a single father when his marriage and business collapsed learns to take a chance on a new love.'
+  })
+
+  ListItem.insert({
+   list: 'two',
+   title: 'TWO BY TWO',
+   image: 'http://populist-images.s3.amazonaws.com/EscapeClause.jpg',
+   content: 'A man who became a single father when his marriage and business collapsed learns to take a chance on a new love.'
+  })
+
+  ListItem.insert({
+   list: 'two',
+   title: 'SMALL GREAT THINGS',
+   image: 'http://populist-images.s3.amazonaws.com/EscapeClause.jpg',
+   content: 'A medical crisis entangles a black nurse, a white supremacist father and a white lawyer.'
+  })
+
+  ListItem.insert({
+   list: 'two',
+   title: 'THE OBSIDIAN CHAMBER',
+   image: 'http://populist-images.s3.amazonaws.com/EscapeClause.jpg',
+   content: 'While the F.B.I. agent Aloysius Pendergast is believed dead, his ward is kidnapped.'
+  })
+
+  ListItem.insert({
+   list: 'two',
+   title: 'VINCE FLYNN: ORDER TO KILL',
+   image: 'http://populist-images.s3.amazonaws.com/EscapeClause.jpg',
+   content: 'Flynn\'s character, the C.I.A. operative Mitch Rapp, uncovers a dangerous Russian plot. Flynn died in 2013..'
+  })
+
+  ListItem.insert({
+   list: 'two',
+   title: 'THE SECRET HISTORY OF TWIN PEAKS',
+   image: 'http://populist-images.s3.amazonaws.com/EscapeClause.jpg',
+   content: 'An amplification of the world of the 1990-91 TV series Twin Peaks by the show\'s co-creator, in preparation for new episodes to be aired on Showtime in 2017.'
+  })
+
+  ListItem.insert({
+   list: 'two',
+   title: 'COMMONWEALTH',
+   image: 'http://populist-images.s3.amazonaws.com/EscapeClause.jpg',
+   content: 'Five decades in the lives of two families  parents, children, siblings, stepchildren remade by divorce. '
+  })
+
 
    //LIST THREE temp content
   Lists.insert({
