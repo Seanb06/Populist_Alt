@@ -47,7 +47,7 @@ const FeaturedLists = ({lists}) => (
 
 
 
-     {lists.map(({_id, title, lead_image}) => (
+     {lists.map(({_id, title, item_count, lead_image}) => (
 
       
       <div key={_id}>
@@ -56,7 +56,7 @@ const FeaturedLists = ({lists}) => (
             <CardMedia>
               <img src={lead_image} />
             </CardMedia>
-            <CardTitle className="card-title" title={title} />
+            <CardTitle className="card-title" title={"The " + item_count + " Best " + title} />
             
           </Card>
           </a> 

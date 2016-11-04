@@ -52,13 +52,13 @@ let ListDetail = ({listDetail, listId, listItems}) => (
 
 
 
-      {listItems.map(({_id, title, image, content}) => (
+      {listItems.map(({_id, title, image, content, order}) => (
       
         <div className="list-item" key={_id}>
           <div className="thumb">
             <img src={image} />
           </div>
-          <h3><span>1</span> {title}</h3>
+          <h3><span>{order}</span> {title}</h3>
           <p>{content}</p>
         </div>
 
