@@ -56,14 +56,14 @@ const Home = ({lists}) => (
     disableImagesLoaded={false} // default false
     updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
   >
-    {lists.map(({_id, title}) => (
+    {lists.map(({_id, title, lead_image}) => (
 
       
       <div key={_id}>
         <a href={'/list/' + _id} className="card-lnk">
           <Card className="home-card">
             <CardMedia>
-              <img src="http://lorempixel.com/600/337/nature/" />
+              <img src={lead_image} />
             </CardMedia>
             <CardTitle className="card-title" title={title} />
             

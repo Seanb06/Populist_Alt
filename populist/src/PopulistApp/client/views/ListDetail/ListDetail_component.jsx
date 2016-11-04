@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-const ListContent = ({listDetail}) => (
+const ListContent = ({listDetail, listItems}) => (
   <div>
     List Detail
     <h3>{listDetail.title}</h3>
@@ -11,7 +11,7 @@ const ListContent = ({listDetail}) => (
   </div>
 );
 
-let ListDetail = ({listDetail, listId}) => (
+let ListDetail = ({listDetail, listId, listItems}) => (
   <div className="list-detail-container body-max clearfix">
     <div className="list-detail-cont">
       <a href="#" className="likes-corner">
@@ -25,8 +25,8 @@ let ListDetail = ({listDetail, listId}) => (
       <img src="/assets/images/fork-knife.svg" className="img-likes food-likes" role="img" alt="" />
       <div className="num-likes">143 Likes</div>
       <div className="list-head">
-        <div className="num-head">The Five Best...</div>
-        <h2>Bagels in Park Slope</h2>
+        <div className="num-head">The Best...</div>
+        <h2>{listDetail.title}</h2>
         <div className="list-descr">I've tried a ton of bagels in the city but these are the ones that I will wake up early to get. Lorum ipsum ipsum lorem to the blank.
           <author>By Kate Miller</author>
         </div>
@@ -49,34 +49,21 @@ let ListDetail = ({listDetail, listId}) => (
 
         </div>
       </div>
+
+
+
+      {listItems.map(({_id, title, image, content}) => (
+      
+        <div className="list-item" key={_id}>
+          <div className="thumb">
+            <img src={image} />
+          </div>
+          <h3><span>1</span> {title}</h3>
+          <p>{content}</p>
+        </div>
+
+      ))}
            
-      <div className="list-item">
-        <div className="thumb">
-          <img src="http://lorempixel.com/600/337/nature/" />
-        </div>
-        <h3><span>1</span> Absolute Bagel</h3>
-        <p>The line gets really long, but it’s worth the wait! Get the everything bagel with lox spread and onion! The line gets really long, but it’s worth the wait! Get the everything bagel with lox.</p>
-      </div>
-
-      <div className="list-item">
-        <div className="thumb">
-          <img src="http://lorempixel.com/600/337/nature/" />
-        </div>
-        <h3><span>1</span> Absolute Bagel</h3>
-        <p>The line gets really long, but it’s worth the wait! Get the everything bagel with lox spread and onion! The line gets really long, but it’s worth the wait! Get the everything bagel with lox.</p>
-      </div>
-      
-      
-
-
-
-    
-    {/*
-        {listDetail? <ListContent listDetail={listDetail}/> : "Loading..."}
-    */}
- 
-
-
 
     </div>
     <div className="list-detail-sidebar">

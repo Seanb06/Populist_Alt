@@ -19,14 +19,14 @@ export default function createRoutes(store) {
   const connect = (fn) => (nextState, replaceState) => fn(store, nextState, replaceState);
 
   function logoutOnEnterHook(nextState, replace) {
-    if (store.getState().auth.user) {
-      // logout the user, and redirect to '/' while success
-      store.dispatch(logoutAndRedirectHome())
-    } else {
-      // the user hasn't login yet
-      // this is not working here
-      store.dispatch(push("/login"));
-    }
+    // if (store.getState().auth.user) {
+    //   // logout the user, and redirect to '/' while success
+    //   store.dispatch(logoutAndRedirectHome())
+    // } else {
+    //   // the user hasn't login yet
+    //   // this is not working here
+    //   store.dispatch(push("/login"));
+    // }
   }
 
   // const UserIsAuthenticated = UserAuthWrapper({
@@ -60,8 +60,8 @@ export default function createRoutes(store) {
       <Route component={MainLayout}>
         <IndexRoute component={Home} />
         <Route path="/list/:listId" component={ListDetail} />
-        <Route path="/create" component={requireAuthentication(ListCreate)} onEnter={connect(requireAuthentication.onEnter)} />
-        <Route path="/profile" component={requireAuthentication(Profile)} onEnter={connect(requireAuthentication.onEnter)} />
+        <Route path="/create" component={ListCreate} onEnter={connect(requireAuthentication.onEnter)} />
+        <Route path="/profile" component={Profile} onEnter={connect(requireAuthentication.onEnter)} />
         
       </Route>
     </Route>
