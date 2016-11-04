@@ -177,89 +177,91 @@ Meteor.startup(function(){
    list: 'four',
    title: 'Supercrown Coffee Roasters',
    image: 'http://populist-images.s3.amazonaws.com/SuperCrown.4.jpg',
-   content: ''
+   content: 'You can tell from the wine-style tasting notes on the menu that the owner of this airy Bushwick newcomer—Darleen Scherer, a founder of Gorilla Coffee—takes her java seriously. Connoisseurs can test whether they can distinguish between notes of green grapes in the PT Toarco from Sulawesi and the Concorde grapes in the Kanzu Lot #15 from Rwanda. In addition to pour-over, you\'ll find all the usual cafe offerings (cappuccinos, lattes, cortados), a selection of teas, plus treats like single origin drinking chocolate, an iced almond dirty chai and a coffee milkshake.'
   })
 
   ListItem.insert({
    list: 'four',
    title: 'Tekoá',
    image: 'http://populist-images.s3.amazonaws.com/Tekoav1.4.jpg',
-   content: ''
+   content: 'Fans of Cobble Hill\'s La Vara and Txikito and El Quinto Pino in Chelsea will want to check out this sibling Cobble Hill cafe (on the same block as La Vara). The spot serves coffee (from Irving Farm Coffee Roasters), housemade pastries, breakfast, sandwiches and much more, with flavors on the broad menu wandering from Latin America to Spain to the Mediterranean. With its bright-red door and sunny window seats, the trim storefront has a charming stay-awhile vibe that\'s enhanced by the fact that breakfast is served into the late afternoon. Beyond breakfast, there are hearty sandwiches such as the porchetta spiced pork shoulder and a double burger with Idiazabel cheese, plus cakes, cookies and other baked goods.'
   })
 
   ListItem.insert({
    list: 'four',
    title: 'Ludlow Coffee Supply Co.',
    image: 'http://populist-images.s3.amazonaws.com/Ludlowv1.4.jpg',
-   content: ''
+   content: 'Lower East Siders who used to put down pints of beer at the Pink Pony can now sidle up to the same wooden bar for a cold brew coffee. The coffee shop, a sibling to Sweet Chick next door, is open from 8 AM to 8 PM, serving espresso, lattes and other coffee drinks, plus a brief menu of eggs, avocado toast and salads. Those who are so inclined can head to the back of the bar to the adjoining Ludlow Barber Supply for a hot-towel shave or a haircut.'
   })
 
   ListItem.insert({
    list: 'four',
    title: 'Tilda All Day',
    image: 'http://populist-images.s3.amazonaws.com/Tildav1.4.jpg',
-   content: ''
+   content: 'This all-day cafe from chef Claire Welle (Gwynett Street, Per Se, Pecks) and co-owners Daniel Nusbaum and Samantha Safer opened last fall in Clinton Hill. With a space designed by the MP Shift, the cafe features Parlor Coffee, housemade pasties and various sandwiches and small plates that rotate frequently.'
   })
 
   // List 5 content
   Lists.insert({
     _id: 'five',
     title: 'Bagels',
-    lead_image: 'http://populist-images.s3.amazonaws.com/essa.jpg',
-    subtitle: 'Sometimes you need a place to meet a client that isn’t a office. These are my go-to spots in NYC with a professional quiet setting (and good coffee)!',
-    byline: 'Sarah Nelson',
+    lead_image: 'http://populist-images.s3.amazonaws.com/tompkins.jpg',
+    subtitle: 'I was teethed on H&H Bagels, and it\'s no secret that the heartbreak I experienced when my beloved bagel shop shuttered in 2011 was worse than that from any failed romantic relationship. I don\'t care if the quality of H&H went down in its later years, for I dream, still, of those hot sesame bagels, and nothing will ever replace them for me. Still, this city has other good bagels, I suppose. Whatever. Here they are, broken down by categoryÑleave your favorites in the comments, and feel free to send me more bagels to ease my pain. ',
+    byline: 'Rebecca Fishbein',
     content: 'Content for list 4.'
   });
 
+
+  ListItem.insert({
+   list: 'five',
+   title: 'TOMPKINS SQUARE BAGELS',
+   image: 'http://populist-images.s3.amazonaws.com/tompkins.jpg',
+   content: 'Tompkins Square Bagels which owner Christopher Pugliese calls a love letter to the East Village has plenty of local charm. Moderately priced, and objectively robust, bagels come shiny and packed with cream cheese, of which there is a wide array of options (including the Birthday Cake cream cheese, which is legendary). Seating tends to be limited, so it may be best to plan to grab-on-the-go.'
+  })
  
   ListItem.insert({
    list: 'five',
    title: 'ESS-A-BAGEL',
    image: 'http://populist-images.s3.amazonaws.com/essa.jpg',
-   content: ''
+   content: 'The original 1st Avenue location is dead and gone (though a new East Village/Gramercy spot will arrive...eventually), but Midtown East still serves up the same giant, fluffy bagels for which this Manhattan mainstay\'s long been known. Some unenlightened folk claim Ess-A-Bagel\'s offerings are too big, but we beg to differ, and will continue to indulge in a crispy, colossal everything bagel loaded with scallion cream cheese, lox and tomato. Our apologies if you get too close to us on the train later, but at least we help mitigate flu season.'
   })
 
   ListItem.insert({
    list: 'five',
    title: 'MURRAY\'S BAGELS',
    image: 'http://populist-images.s3.amazonaws.com/murrays.jpg',
-   content: ''
+   content: 'Murray\'s broke my heart last year when they gave in to transplants\' demands and began toasting fresh bagels, a move I consider a great bagel shop\'s greatest crime. Still, an everything bagel with lox spread is a work of art here. Go early to get the freshest bagel, skip the toaster and leave in the embrace of bagel-eating angelsÑnote that there\'s also a location in Chelsea, but the 20-plus year old Greenwich Village spot is above and beyond the best one.'
   })
 
   ListItem.insert({
    list: 'five',
    title: 'TERRACE BAGELS',
    image: 'http://populist-images.s3.amazonaws.com/terrace.jpg',
-   content: ''
+   content: 'This Windsor Terrace spot continues to produce some of the most solid bagels in all of Kings County...and therefore the WORLD. These ever-fresh fluffy offerings are best when doused with a healthy serving of house-made flavored cream cheese or sandwiching sliced turkey and mustard. Plus, there\'s no need to get them toasted; just slap on a spread and head out to nearby Prospect Park with your breakfast/lunch/midday snack, assuming the sky has stopped winter-crying.'
   })
 
   ListItem.insert({
    list: 'five',
    title: 'KOSSAR\'S BIALYS',
    image: 'http://populist-images.s3.amazonaws.com/kossars.jpg',
-   content: ''
+   content: 'This LES institution may be famed for its namesake bialys, but the $1 bagels here are nothing to sneer at, either. The shop underwent a recent renovation and now sells a slew of spreads, but the magic here is still in the bagel itself. Of course, if you\'re feeling "adventurous" you can\'t go wrong with a bialy, a pillowy round thing that looks a little bit like a bagel but will SURPRISE YOU when you bite into it and are overcome by the taste of onionÑor try the "pletzel," a savory, foccacia-esque flatbread.'
   })
 
   ListItem.insert({
    list: 'five',
    title: 'BAGEL HOLE',
    image: 'http://populist-images.s3.amazonaws.com/bagelhole.jpg',
-   content: ''
+   content: 'There\'s been some controversy over this venerable Park Slope bagel spot. Naysayers say the bagels here are too small and too tough, but I disagree though I\'m a fan of a fluffier bagel, the little guys here are probably the size a bagel should be, and not what our double cheeseburger-eating stomachs have decided they must be. Haters be damned, Bagel Hole\'s goods are always fresh, dense and chewy, enveloped by the necessary salty, crispy crust. Eat with cream cheese, whitefish, lox or nothing, dream of flocks of angels crowned by bagel halos all night long.'
   })
 
   ListItem.insert({
    list: 'five',
    title: 'UTOPIA BAGELS',
    image: 'http://populist-images.s3.amazonaws.com/utopia.jpg',
-   content: ''
+   content: 'You likely need a car to get to this out-of-the-way bagel shop, but the wares here are well worth the price of a Zip Car rental, with fresh bagels baked onsite earning legions of fans and garnering long, looong lines on weekends. Really, anyone who calls themselves a fan of Real Bagels needs to make the pilgrimage to Utopia get an onion bagel with lox, and don\'t breathe near anyone for a week or two. You\'ll be floating so hard on post-bagel love you won\'t even notice the isolation.'
   })
 
-  ListItem.insert({
-   list: 'five',
-   title: 'TOMPKINS SQUARE BAGELS',
-   image: 'http://populist-images.s3.amazonaws.com/tompkins.jpg',
-   content: ''
-  })
+  
   
 
   //List 6 content
