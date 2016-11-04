@@ -5,7 +5,7 @@ import FlatButton from 'material-ui/FlatButton';
 import { Link } from 'react-router';
 var Masonry = require('react-masonry-component');
 
-const FeaturedLists = () => (
+const FeaturedLists = ({lists}) => (
   <div className="mase-cont">
 
   	<div className="filter-nav body-max filter-desktop">
@@ -45,102 +45,28 @@ const FeaturedLists = () => (
     
      </div>
 
-      <div>
-        <a href="/list/one" className="card-lnk">
+
+
+     {lists.map(({_id, title, lead_image}) => (
+
+      
+      <div key={_id}>
+        <a href={'/list/' + _id} className="card-lnk">
           <Card className="home-card">
             <CardMedia>
-              <img src="http://lorempixel.com/600/337/nature/" />
+              <img src={lead_image} />
             </CardMedia>
-            <CardTitle className="card-title" title='The 20 Best Barbershops on Brooklyn' />
-            <CardActions>
-              
-            </CardActions>
+            <CardTitle className="card-title" title={title} />
+            
           </Card>
+          </a> 
           <div className="card-love">
           1156</div>
-        </a>
+          
       </div>
 
-      <div>
-        <a href="/list/one" className="card-lnk">
-          <Card className="home-card">
-            <CardMedia>
-              <img src="http://lorempixel.com/600/337/nature/" />
-            </CardMedia>
-            <CardTitle className="card-title" title='Testing out a very long text string to see what happens to the spacing of the module' />
-            <CardActions>
-              
-            </CardActions>
-          </Card>
-          <div className="card-love">
-          1156</div>
-        </a>
-      </div>
-
-      <div>
-        <a href="/list/one" className="card-lnk">
-          <Card className="home-card">
-            <CardMedia>
-              <img src="http://lorempixel.com/600/337/nature/" />
-            </CardMedia>
-            <CardTitle className="card-title" title='Testing out a very long text string to see what happens to the spacing of the module' />
-            <CardActions>
-              
-            </CardActions>
-          </Card>
-          <div className="card-love">
-          1156</div>
-        </a>
-      </div>
-
-      <div>
-        <a href="/list/one" className="card-lnk">
-          <Card className="home-card">
-            <CardMedia>
-              <img src="http://lorempixel.com/600/337/nature/" />
-            </CardMedia>
-            <CardTitle className="card-title" title='Testing out a very long text string to see what happens to the spacing of the module' />
-            <CardActions>
-              
-            </CardActions>
-          </Card>
-          <div className="card-love">
-          1156</div>
-        </a>
-      </div>
-
-      <div>
-        <a href="/list/one" className="card-lnk">
-          <Card className="home-card">
-            <CardMedia>
-              <img src="http://lorempixel.com/600/337/nature/" />
-            </CardMedia>
-            <CardTitle className="card-title" title='Testing out a very long text string to see what happens to the spacing of the module' />
-            <CardActions>
-              
-            </CardActions>
-          </Card>
-          <div className="card-love">
-          1156</div>
-        </a>
-      </div>
-
-      <div>
-        <a href="/list/one" className="card-lnk">
-          <Card className="home-card">
-            <CardMedia>
-              <img src="http://lorempixel.com/600/337/nature/" />
-            </CardMedia>
-            <CardTitle className="card-title" title='Testing out a very long text string to see what happens to the spacing of the module' />
-            <CardActions>
-              
-            </CardActions>
-          </Card>
-          <div className="card-love">
-          1156</div>
-        </a>
-      </div>
-
+    ))}
+     
   </Masonry>
   </div>
 );

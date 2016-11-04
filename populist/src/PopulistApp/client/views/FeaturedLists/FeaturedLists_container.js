@@ -1,17 +1,21 @@
 import { composeWithTracker } from 'react-komposer';
 import { connect } from "react-redux";
 import FeaturedLists from './FeaturedLists_component';
+import Lists from 'PopulistApp/collections/Lists'
 
 
 const mapStateToProps = state => ({
-  something: state.something    // listDetail gets assigned to props here
+  lists: state.lists    // listDetail gets assigned to props here
 });
 
 const onPropsChange = (props, onData) => {
-  onData(null, null);
+  const handle = Meteor.subscribe('lists');
+
+  if(handle.ready()) {
+    const lists = Lists.find({}, {sort: {_id: 1}}).fetch();
+    onData(null, {lists});
+  };
 
 };
 
-//export default connect(mapStateToProps)(composeWithTracker(onPropsChange)(Login));
-
-export default FeaturedLists;
+export default connect(mapStateToProps)(composeWithTracker(onPropsChange)(FeaturedLists));

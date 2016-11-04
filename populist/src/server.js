@@ -163,15 +163,160 @@ Meteor.startup(function(){
    content: 'Tomcats is the industry standard for the modern vintage gentleman\'s cut. What does that mean? If you part it, comb it, slick it back, or smear it with pomade, this is your joint. Sure they\'ll do any kid of cut you want, but if you\'re after a quick buzz, Astor Barber is your best bet.'
   })
 
-
-
-
-
   //List FOUR content
+  Lists.insert({
+    _id: 'four',
+    title: 'Coffee',
+    lead_image: 'http://populist-images.s3.amazonaws.com/SuperCrown.4.jpg',
+    subtitle: 'Sometimes you need a place to meet a client that isn’t a office. These are my go-to spots in NYC with a professional quiet setting (and good coffee)!',
+    byline: 'Sarah Nelson',
+    content: 'Content for list 4.'
+  });
 
-  Lists.insert({_id: 'four', title: 'Poplist list 4', content: 'Content for list 4.'});
-  Lists.insert({_id: 'five', title: 'Poplist list 5', content: 'Content for list 5.'});
-  Lists.insert({_id: 'six', title: 'Poplist list 6', content: 'Content for list 6.'});
+  ListItem.insert({
+   list: 'four',
+   title: 'Supercrown Coffee Roasters',
+   image: 'http://populist-images.s3.amazonaws.com/SuperCrown.4.jpg',
+   content: ''
+  })
+
+  ListItem.insert({
+   list: 'four',
+   title: 'Tekoá',
+   image: 'http://populist-images.s3.amazonaws.com/Tekoav1.4.jpg',
+   content: ''
+  })
+
+  ListItem.insert({
+   list: 'four',
+   title: 'Ludlow Coffee Supply Co.',
+   image: 'http://populist-images.s3.amazonaws.com/Ludlowv1.4.jpg',
+   content: ''
+  })
+
+  ListItem.insert({
+   list: 'four',
+   title: 'Tilda All Day',
+   image: 'http://populist-images.s3.amazonaws.com/Tildav1.4.jpg',
+   content: ''
+  })
+
+  // List 5 content
+  Lists.insert({
+    _id: 'five',
+    title: 'Bagels',
+    lead_image: 'http://populist-images.s3.amazonaws.com/essa.jpg',
+    subtitle: 'Sometimes you need a place to meet a client that isn’t a office. These are my go-to spots in NYC with a professional quiet setting (and good coffee)!',
+    byline: 'Sarah Nelson',
+    content: 'Content for list 4.'
+  });
+
+ 
+  ListItem.insert({
+   list: 'five',
+   title: 'ESS-A-BAGEL',
+   image: 'http://populist-images.s3.amazonaws.com/essa.jpg',
+   content: ''
+  })
+
+  ListItem.insert({
+   list: 'five',
+   title: 'MURRAY\'S BAGELS',
+   image: 'http://populist-images.s3.amazonaws.com/murrays.jpg',
+   content: ''
+  })
+
+  ListItem.insert({
+   list: 'five',
+   title: 'TERRACE BAGELS',
+   image: 'http://populist-images.s3.amazonaws.com/terrace.jpg',
+   content: ''
+  })
+
+  ListItem.insert({
+   list: 'five',
+   title: 'KOSSAR\'S BIALYS',
+   image: 'http://populist-images.s3.amazonaws.com/kossars.jpg',
+   content: ''
+  })
+
+  ListItem.insert({
+   list: 'five',
+   title: 'BAGEL HOLE',
+   image: 'http://populist-images.s3.amazonaws.com/bagelhole.jpg',
+   content: ''
+  })
+
+  ListItem.insert({
+   list: 'five',
+   title: 'UTOPIA BAGELS',
+   image: 'http://populist-images.s3.amazonaws.com/utopia.jpg',
+   content: ''
+  })
+
+  ListItem.insert({
+   list: 'five',
+   title: 'TOMPKINS SQUARE BAGELS',
+   image: 'http://populist-images.s3.amazonaws.com/tompkins.jpg',
+   content: ''
+  })
+  
+
+  //List 6 content
+ Lists.insert({
+    _id: 'six',
+    title: 'Hip Hop',
+    lead_image: 'http://populist-images.s3.amazonaws.com/Nasijusr.jpg',
+    subtitle: 'In the 1990s, hip-hop truly exploded. Regional scenes from around the country blew up in unprecedented ways, helping rap to become one of the most dominant musical genres in the world.Major corporations invested in labels that started on the street, while regional indies wielded enough power to drop game-changing records. It was an era of transformation that created an incredible variety of styles and sounds. Along the way, some of the greatest rap albums of all time were released: The Low End Theory. Life After Death. 36 Chambers. The Chronic.',
+    byline: 'Ben Manzone',
+    content: 'Content for list 6.'
+  });
+
+ ListItem.insert({
+   list: 'six',
+   title: 'Nas, Illmatic (1994)',
+   image: 'http://populist-images.s3.amazonaws.com/Nasijusr.jpg',
+   content: ''
+  })
+
+ ListItem.insert({
+   list: 'six',
+   title: 'The Notorious B.I.G., Life After Death (1997)',
+   image: 'http://populist-images.s3.amazonaws.com/Biggie7y.jpg',
+   content: ''
+  })
+  
+  ListItem.insert({
+   list: 'six',
+   title: 'A Tribe Called Quest, Midnight Marauders (1993)',
+   image: 'http://populist-images.s3.amazonaws.com/Tribe.jpg',
+   content: ''
+  })
+
+  ListItem.insert({
+   list: 'six',
+   title: 'OutKast, Aquemini (1998)',
+   image: 'http://populist-images.s3.amazonaws.com/Outcast.jpg',
+   content: ''
+  })
+
+  ListItem.insert({
+   list: 'six',
+   title: 'The Pharcyde, Bizarre Ride II The Pharcyde (1992)',
+   image: 'http://populist-images.s3.amazonaws.com/Pharcyde.jpg',
+   content: ''
+  })
+
+  ListItem.insert({
+   list: 'six',
+   title: 'Gang Starr, Hard to Earn (1994)',
+   image: 'http://populist-images.s3.amazonaws.com/GangStarrt.jpg',
+   content: ''
+  })
+  
+  
+  
+
   Lists.insert({_id: 'seven', title: 'My Secret LIst', category: 'private'});
 
  
